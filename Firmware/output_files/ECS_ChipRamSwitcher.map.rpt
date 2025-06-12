@@ -1,0 +1,300 @@
+Analysis & Synthesis report for ECS_ChipRamSwitcher
+Sat Jun 07 10:50:00 2025
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |ECS_ChipRamSwitcher
+ 11. Analysis & Synthesis Messages
+ 12. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++-----------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Sat Jun 07 10:50:00 2025           ;
+; Quartus II 64-Bit Version   ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name               ; ECS_ChipRamSwitcher                             ;
+; Top-level Entity Name       ; ECS_ChipRamSwitcher                             ;
+; Family                      ; MAX7000S                                        ;
+; Total macrocells            ; 46                                              ;
+; Total pins                  ; 49                                              ;
++-----------------------------+-------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                          ;
++----------------------------------------------------------------------------+---------------------+---------------------+
+; Option                                                                     ; Setting             ; Default Value       ;
++----------------------------------------------------------------------------+---------------------+---------------------+
+; Device                                                                     ; EPM7064STC100-7     ;                     ;
+; Top-level entity name                                                      ; ECS_ChipRamSwitcher ; ECS_ChipRamSwitcher ;
+; Family name                                                                ; MAX7000S            ; Cyclone IV GX       ;
+; Use smart compilation                                                      ; Off                 ; Off                 ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                  ; On                  ;
+; Enable compact report table                                                ; Off                 ; Off                 ;
+; Create Debugging Nodes for IP Cores                                        ; Off                 ; Off                 ;
+; Preserve fewer node names                                                  ; On                  ; On                  ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                 ; Off                 ;
+; Verilog Version                                                            ; Verilog_2001        ; Verilog_2001        ;
+; VHDL Version                                                               ; VHDL_1993           ; VHDL_1993           ;
+; State Machine Processing                                                   ; Auto                ; Auto                ;
+; Safe State Machine                                                         ; Off                 ; Off                 ;
+; Extract Verilog State Machines                                             ; On                  ; On                  ;
+; Extract VHDL State Machines                                                ; On                  ; On                  ;
+; Ignore Verilog initial constructs                                          ; Off                 ; Off                 ;
+; Iteration limit for constant Verilog loops                                 ; 5000                ; 5000                ;
+; Iteration limit for non-constant Verilog loops                             ; 250                 ; 250                 ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                  ; On                  ;
+; Infer RAMs from Raw Logic                                                  ; On                  ; On                  ;
+; Parallel Synthesis                                                         ; On                  ; On                  ;
+; NOT Gate Push-Back                                                         ; On                  ; On                  ;
+; Power-Up Don't Care                                                        ; On                  ; On                  ;
+; Remove Duplicate Registers                                                 ; On                  ; On                  ;
+; Ignore CARRY Buffers                                                       ; Off                 ; Off                 ;
+; Ignore CASCADE Buffers                                                     ; Off                 ; Off                 ;
+; Ignore GLOBAL Buffers                                                      ; Off                 ; Off                 ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                 ; Off                 ;
+; Ignore LCELL Buffers                                                       ; Auto                ; Auto                ;
+; Ignore SOFT Buffers                                                        ; Off                 ; Off                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                 ; Off                 ;
+; Optimization Technique                                                     ; Speed               ; Speed               ;
+; Allow XOR Gate Usage                                                       ; On                  ; On                  ;
+; Auto Logic Cell Insertion                                                  ; On                  ; On                  ;
+; Parallel Expander Chain Length                                             ; 4                   ; 4                   ;
+; Auto Parallel Expanders                                                    ; On                  ; On                  ;
+; Auto Open-Drain Pins                                                       ; On                  ; On                  ;
+; Auto Resource Sharing                                                      ; Off                 ; Off                 ;
+; Maximum Fan-in Per Macrocell                                               ; 100                 ; 100                 ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                  ; On                  ;
+; Ignore translate_off and synthesis_off directives                          ; Off                 ; Off                 ;
+; Report Parameter Settings                                                  ; On                  ; On                  ;
+; Report Source Assignments                                                  ; On                  ; On                  ;
+; Report Connectivity Checks                                                 ; On                  ; On                  ;
+; HDL message level                                                          ; Level2              ; Level2              ;
+; Suppress Register Optimization Related Messages                            ; Off                 ; Off                 ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000                ; 5000                ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000                ; 5000                ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                 ; 100                 ;
+; Block Design Naming                                                        ; Auto                ; Auto                ;
+; Synthesis Effort                                                           ; Auto                ; Auto                ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                  ; On                  ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                 ; Off                 ;
+; Analysis & Synthesis Message Level                                         ; Medium              ; Medium              ;
+; Disable Register Merging Across Hierarchies                                ; Auto                ; Auto                ;
+; Synthesis Seed                                                             ; 1                   ; 1                   ;
++----------------------------------------------------------------------------+---------------------+---------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                      ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                        ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------+---------+
+; ECS_ChipRamSwitcher.v            ; yes             ; User Verilog HDL File  ; W:/Electronics/Projects/Mine/Amiga/SMD2000 Bank Switching Agnus Card/Firmware/ECS_ChipRamSwitcher.v ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++----------------------+----------------------+
+; Resource             ; Usage                ;
++----------------------+----------------------+
+; Logic cells          ; 46                   ;
+; Total registers      ; 16                   ;
+; I/O pins             ; 49                   ;
+; Shareable expanders  ; 9                    ;
+; Maximum fan-out node ; LRGA[1]              ;
+; Maximum fan-out      ; 17                   ;
+; Total fan-out        ; 321                  ;
+; Average fan-out      ; 3.09                 ;
++----------------------+----------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                  ;
++----------------------------+------------+------+----------------------+--------------+
+; Compilation Hierarchy Node ; Macrocells ; Pins ; Full Hierarchy Name  ; Library Name ;
++----------------------------+------------+------+----------------------+--------------+
+; |ECS_ChipRamSwitcher       ; 46         ; 49   ; |ECS_ChipRamSwitcher ; work         ;
++----------------------------+------------+------+----------------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; BANKNUM[15]                                         ; Equal0              ; yes                    ;
+; BANKNUM[14]                                         ; Equal0              ; yes                    ;
+; BANKNUM[13]                                         ; Equal0              ; yes                    ;
+; BANKNUM[12]                                         ; Equal0              ; yes                    ;
+; BANKNUM[11]                                         ; Equal0              ; yes                    ;
+; BANKNUM[10]                                         ; Equal0              ; yes                    ;
+; BANKNUM[9]                                          ; Equal0              ; yes                    ;
+; BANKNUM[8]                                          ; Equal0              ; yes                    ;
+; BCR[15]                                             ; Equal0              ; yes                    ;
+; BCR[13]                                             ; Equal0              ; yes                    ;
+; BCR[12]                                             ; Equal0              ; yes                    ;
+; BCR[14]                                             ; Equal0              ; yes                    ;
+; BCR[11]                                             ; Equal0              ; yes                    ;
+; BCR[10]                                             ; Equal0              ; yes                    ;
+; BCR[9]                                              ; Equal0              ; yes                    ;
+; BCR[8]                                              ; Equal0              ; yes                    ;
+; BANKNUM[7]                                          ; VCC                 ; yes                    ;
+; BANKNUM[6]_308                                      ; VCC                 ; yes                    ;
+; BANKNUM[6]                                          ; VCC                 ; yes                    ;
+; BANKNUM[5]                                          ; VCC                 ; yes                    ;
+; BANKNUM[4]                                          ; VCC                 ; yes                    ;
+; BANKNUM[3]                                          ; VCC                 ; yes                    ;
+; BANKNUM[2]                                          ; VCC                 ; yes                    ;
+; BANKNUM[1]                                          ; VCC                 ; yes                    ;
+; BANKNUM[0]                                          ; VCC                 ; yes                    ;
+; Number of user-specified and inferred latches = 25  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; LRGA[0]                               ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |ECS_ChipRamSwitcher ;
++----------------+----------+---------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                    ;
++----------------+----------+---------------------------------------------------------+
+; addBANKC       ; 00011111 ; Unsigned Binary                                         ;
+; addCONFIG      ; 01011111 ; Unsigned Binary                                         ;
+; addSTATUS      ; 11011111 ; Unsigned Binary                                         ;
+; configuration  ; 10000001 ; Unsigned Binary                                         ;
++----------------+----------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Jun 07 10:49:58 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ECS_ChipRamSwitcher -c ECS_ChipRamSwitcher
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file ecs_chipramswitcher.v
+    Info (12023): Found entity 1: ECS_ChipRamSwitcher
+Info (12127): Elaborating entity "ECS_ChipRamSwitcher" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at ECS_ChipRamSwitcher.v(62): object "WRITE" assigned a value but never read
+Warning (10235): Verilog HDL Always Construct warning at ECS_ChipRamSwitcher.v(108): variable "LDRDI" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ECS_ChipRamSwitcher.v(109): variable "LDRDI" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10240): Verilog HDL Always Construct warning at ECS_ChipRamSwitcher.v(106): inferring latch(es) for variable "BCR", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ECS_ChipRamSwitcher.v(106): inferring latch(es) for variable "BANKNUM", which holds its previous value in one or more paths through the always construct
+Warning (10235): Verilog HDL Always Construct warning at ECS_ChipRamSwitcher.v(162): variable "BCR" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10240): Verilog HDL Always Construct warning at ECS_ChipRamSwitcher.v(158): inferring latch(es) for variable "BANKNUM", which holds its previous value in one or more paths through the always construct
+Warning (10235): Verilog HDL Always Construct warning at ECS_ChipRamSwitcher.v(196): variable "STATUS" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ECS_ChipRamSwitcher.v(197): variable "BCR" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ECS_ChipRamSwitcher.v(201): variable "CONFIG" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Info (10041): Inferred latch for "BANKNUM[7]" at ECS_ChipRamSwitcher.v(161)
+Info (10041): Inferred latch for "BANKNUM[6]" at ECS_ChipRamSwitcher.v(161)
+Info (10041): Inferred latch for "BANKNUM[5]" at ECS_ChipRamSwitcher.v(161)
+Info (10041): Inferred latch for "BANKNUM[4]" at ECS_ChipRamSwitcher.v(161)
+Info (10041): Inferred latch for "BANKNUM[3]" at ECS_ChipRamSwitcher.v(161)
+Info (10041): Inferred latch for "BANKNUM[2]" at ECS_ChipRamSwitcher.v(161)
+Info (10041): Inferred latch for "BANKNUM[1]" at ECS_ChipRamSwitcher.v(161)
+Info (10041): Inferred latch for "BANKNUM[0]" at ECS_ChipRamSwitcher.v(161)
+Info (10041): Inferred latch for "BANKNUM[15]" at ECS_ChipRamSwitcher.v(107)
+Info (10041): Inferred latch for "BANKNUM[14]" at ECS_ChipRamSwitcher.v(107)
+Info (10041): Inferred latch for "BANKNUM[13]" at ECS_ChipRamSwitcher.v(107)
+Info (10041): Inferred latch for "BANKNUM[12]" at ECS_ChipRamSwitcher.v(107)
+Info (10041): Inferred latch for "BANKNUM[11]" at ECS_ChipRamSwitcher.v(107)
+Info (10041): Inferred latch for "BANKNUM[10]" at ECS_ChipRamSwitcher.v(107)
+Info (10041): Inferred latch for "BANKNUM[9]" at ECS_ChipRamSwitcher.v(107)
+Info (10041): Inferred latch for "BANKNUM[8]" at ECS_ChipRamSwitcher.v(107)
+Info (10041): Inferred latch for "BCR[15]" at ECS_ChipRamSwitcher.v(107)
+Info (10041): Inferred latch for "BCR[14]" at ECS_ChipRamSwitcher.v(107)
+Info (10041): Inferred latch for "BCR[13]" at ECS_ChipRamSwitcher.v(107)
+Info (10041): Inferred latch for "BCR[12]" at ECS_ChipRamSwitcher.v(107)
+Info (10041): Inferred latch for "BCR[11]" at ECS_ChipRamSwitcher.v(107)
+Info (10041): Inferred latch for "BCR[10]" at ECS_ChipRamSwitcher.v(107)
+Info (10041): Inferred latch for "BCR[9]" at ECS_ChipRamSwitcher.v(107)
+Info (10041): Inferred latch for "BCR[8]" at ECS_ChipRamSwitcher.v(107)
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "BCR[15]" merged with LATCH primitive "BANKNUM[15]"
+    Info (13026): Duplicate LATCH primitive "BCR[14]" merged with LATCH primitive "BANKNUM[14]"
+    Info (13026): Duplicate LATCH primitive "BCR[13]" merged with LATCH primitive "BANKNUM[13]"
+    Info (13026): Duplicate LATCH primitive "BCR[12]" merged with LATCH primitive "BANKNUM[12]"
+    Info (13026): Duplicate LATCH primitive "BCR[11]" merged with LATCH primitive "BANKNUM[11]"
+    Info (13026): Duplicate LATCH primitive "BCR[10]" merged with LATCH primitive "BANKNUM[10]"
+    Info (13026): Duplicate LATCH primitive "BCR[9]" merged with LATCH primitive "BANKNUM[9]"
+    Info (13026): Duplicate LATCH primitive "BCR[8]" merged with LATCH primitive "BANKNUM[8]"
+Info (280013): Promoted pin-driven signal(s) to global signal
+    Info (280014): Promoted clock signal driven by pin "CCK" to global clock signal
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CCKQD"
+Info (21057): Implemented 104 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 21 input pins
+    Info (21059): Implemented 28 output pins
+    Info (21063): Implemented 46 macrocells
+    Info (21073): Implemented 9 shareable expanders
+Info (144001): Generated suppressed messages file W:/Electronics/Projects/Mine/Amiga/SMD2000 Bank Switching Agnus Card/Firmware/output_files/ECS_ChipRamSwitcher.map.smsg
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 4559 megabytes
+    Info: Processing ended: Sat Jun 07 10:50:00 2025
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in W:/Electronics/Projects/Mine/Amiga/SMD2000 Bank Switching Agnus Card/Firmware/output_files/ECS_ChipRamSwitcher.map.smsg.
+
+

@@ -1,0 +1,1335 @@
+TimeQuest Timing Analyzer report for ECS_ChipRamSwitcher
+Sat Jun 07 10:50:07 2025
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'CCKD'
+ 12. Setup: 'CCKQ'
+ 13. Hold: 'CCKD'
+ 14. Hold: 'CCKQ'
+ 15. Minimum Pulse Width: 'CCK'
+ 16. Minimum Pulse Width: 'CCKD'
+ 17. Minimum Pulse Width: 'CCKQ'
+ 18. Setup Times
+ 19. Hold Times
+ 20. Clock to Output Times
+ 21. Minimum Clock to Output Times
+ 22. Propagation Delay
+ 23. Minimum Propagation Delay
+ 24. Output Enable Times
+ 25. Minimum Output Enable Times
+ 26. Output Disable Times
+ 27. Minimum Output Disable Times
+ 28. Setup Transfers
+ 29. Hold Transfers
+ 30. Report TCCS
+ 31. Report RSKM
+ 32. Unconstrained Paths
+ 33. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; ECS_ChipRamSwitcher                                               ;
+; Device Family      ; MAX7000S                                                          ;
+; Device Name        ; EPM7064STC100-7                                                   ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Slow Model                                                        ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                           ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets  ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------+
+; CCK        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CCK }  ;
+; CCKD       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CCKD } ;
+; CCKQ       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CCKQ } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------+
+
+
++-------------------------------------------------+
+; Fmax Summary                                    ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 45.45 MHz ; 45.45 MHz       ; CCKD       ;      ;
+; 45.45 MHz ; 45.45 MHz       ; CCKQ       ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------+
+; Setup Summary                   ;
++-------+---------+---------------+
+; Clock ; Slack   ; End Point TNS ;
++-------+---------+---------------+
+; CCKD  ; -21.000 ; -105.000      ;
+; CCKQ  ; -21.000 ; -105.000      ;
++-------+---------+---------------+
+
+
++-------------------------------+
+; Hold Summary                  ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CCKD  ; 5.500 ; 0.000         ;
+; CCKQ  ; 5.500 ; 0.000         ;
++-------+-------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++--------------------------------+
+; Minimum Pulse Width Summary    ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CCK   ; -2.500 ; -40.000       ;
+; CCKD  ; -2.500 ; -40.000       ;
+; CCKQ  ; -2.500 ; -40.000       ;
++-------+--------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Setup: 'CCKD'                                                                                       ;
++---------+-----------+---------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node ; To Node ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+-----------+---------+--------------+-------------+--------------+------------+------------+
+; -21.000 ; LRGA[2]   ; LRGA[8] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[2]   ; LRGA[7] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[2]   ; LRGA[6] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[2]   ; LRGA[5] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[2]   ; LRGA[4] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[1]   ; LRGA[8] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[8]   ; LRGA[8] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[7]   ; LRGA[8] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[6]   ; LRGA[8] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[5]   ; LRGA[8] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[4]   ; LRGA[8] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[3]   ; LRGA[8] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[1]   ; LRGA[7] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[8]   ; LRGA[7] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[7]   ; LRGA[7] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[6]   ; LRGA[7] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[5]   ; LRGA[7] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[4]   ; LRGA[7] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[3]   ; LRGA[7] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[1]   ; LRGA[6] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[8]   ; LRGA[6] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[7]   ; LRGA[6] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[6]   ; LRGA[6] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[5]   ; LRGA[6] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[4]   ; LRGA[6] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[3]   ; LRGA[6] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[1]   ; LRGA[5] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[8]   ; LRGA[5] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[7]   ; LRGA[5] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[6]   ; LRGA[5] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[5]   ; LRGA[5] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[4]   ; LRGA[5] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[3]   ; LRGA[5] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[1]   ; LRGA[4] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[8]   ; LRGA[4] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[7]   ; LRGA[4] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[6]   ; LRGA[4] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[5]   ; LRGA[4] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[4]   ; LRGA[4] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[3]   ; LRGA[4] ; CCKD         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[2]   ; LRGA[8] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[2]   ; LRGA[7] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[2]   ; LRGA[6] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[2]   ; LRGA[5] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[2]   ; LRGA[4] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[1]   ; LRGA[8] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[8]   ; LRGA[8] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[7]   ; LRGA[8] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[6]   ; LRGA[8] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[5]   ; LRGA[8] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[4]   ; LRGA[8] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[3]   ; LRGA[8] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[1]   ; LRGA[7] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[8]   ; LRGA[7] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[7]   ; LRGA[7] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[6]   ; LRGA[7] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[5]   ; LRGA[7] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[4]   ; LRGA[7] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[3]   ; LRGA[7] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[1]   ; LRGA[6] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[8]   ; LRGA[6] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[7]   ; LRGA[6] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[6]   ; LRGA[6] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[5]   ; LRGA[6] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[4]   ; LRGA[6] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[3]   ; LRGA[6] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[1]   ; LRGA[5] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[8]   ; LRGA[5] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[7]   ; LRGA[5] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[6]   ; LRGA[5] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[5]   ; LRGA[5] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[4]   ; LRGA[5] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[3]   ; LRGA[5] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[1]   ; LRGA[4] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[8]   ; LRGA[4] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[7]   ; LRGA[4] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[6]   ; LRGA[4] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[5]   ; LRGA[4] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[4]   ; LRGA[4] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[3]   ; LRGA[4] ; CCKQ         ; CCKD        ; 1.000        ; 0.000      ; 19.000     ;
+; -14.500 ; LDRDI[15] ; LRGA[8] ; CCK          ; CCKD        ; 0.500        ; 3.000      ; 15.000     ;
+; -14.500 ; LDRDI[15] ; LRGA[7] ; CCK          ; CCKD        ; 0.500        ; 3.000      ; 15.000     ;
+; -14.500 ; LDRDI[15] ; LRGA[6] ; CCK          ; CCKD        ; 0.500        ; 3.000      ; 15.000     ;
+; -14.500 ; LDRDI[15] ; LRGA[5] ; CCK          ; CCKD        ; 0.500        ; 3.000      ; 15.000     ;
+; -14.500 ; LDRDI[15] ; LRGA[4] ; CCK          ; CCKD        ; 0.500        ; 3.000      ; 15.000     ;
+; -14.500 ; LDRDI[13] ; LRGA[8] ; CCK          ; CCKD        ; 0.500        ; 3.000      ; 15.000     ;
+; -14.500 ; LDRDI[12] ; LRGA[8] ; CCK          ; CCKD        ; 0.500        ; 3.000      ; 15.000     ;
+; -14.500 ; LDRDI[13] ; LRGA[7] ; CCK          ; CCKD        ; 0.500        ; 3.000      ; 15.000     ;
+; -14.500 ; LDRDI[12] ; LRGA[7] ; CCK          ; CCKD        ; 0.500        ; 3.000      ; 15.000     ;
+; -14.500 ; LDRDI[13] ; LRGA[6] ; CCK          ; CCKD        ; 0.500        ; 3.000      ; 15.000     ;
+; -14.500 ; LDRDI[12] ; LRGA[6] ; CCK          ; CCKD        ; 0.500        ; 3.000      ; 15.000     ;
+; -14.500 ; LDRDI[13] ; LRGA[5] ; CCK          ; CCKD        ; 0.500        ; 3.000      ; 15.000     ;
+; -14.500 ; LDRDI[12] ; LRGA[5] ; CCK          ; CCKD        ; 0.500        ; 3.000      ; 15.000     ;
+; -14.500 ; LDRDI[13] ; LRGA[4] ; CCK          ; CCKD        ; 0.500        ; 3.000      ; 15.000     ;
+; -14.500 ; LDRDI[12] ; LRGA[4] ; CCK          ; CCKD        ; 0.500        ; 3.000      ; 15.000     ;
+; -9.500  ; LDRDI[14] ; LRGA[8] ; CCK          ; CCKD        ; 0.500        ; 3.000      ; 10.000     ;
+; -9.500  ; LDRDI[14] ; LRGA[7] ; CCK          ; CCKD        ; 0.500        ; 3.000      ; 10.000     ;
+; -9.500  ; LDRDI[14] ; LRGA[6] ; CCK          ; CCKD        ; 0.500        ; 3.000      ; 10.000     ;
+; -9.500  ; LDRDI[14] ; LRGA[5] ; CCK          ; CCKD        ; 0.500        ; 3.000      ; 10.000     ;
+; -9.500  ; LDRDI[14] ; LRGA[4] ; CCK          ; CCKD        ; 0.500        ; 3.000      ; 10.000     ;
++---------+-----------+---------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Setup: 'CCKQ'                                                                                       ;
++---------+-----------+---------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node ; To Node ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+-----------+---------+--------------+-------------+--------------+------------+------------+
+; -21.000 ; LRGA[2]   ; LRGA[8] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[2]   ; LRGA[7] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[2]   ; LRGA[6] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[2]   ; LRGA[5] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[2]   ; LRGA[4] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[1]   ; LRGA[8] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[8]   ; LRGA[8] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[7]   ; LRGA[8] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[6]   ; LRGA[8] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[5]   ; LRGA[8] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[4]   ; LRGA[8] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[3]   ; LRGA[8] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[1]   ; LRGA[7] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[8]   ; LRGA[7] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[7]   ; LRGA[7] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[6]   ; LRGA[7] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[5]   ; LRGA[7] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[4]   ; LRGA[7] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[3]   ; LRGA[7] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[1]   ; LRGA[6] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[8]   ; LRGA[6] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[7]   ; LRGA[6] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[6]   ; LRGA[6] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[5]   ; LRGA[6] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[4]   ; LRGA[6] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[3]   ; LRGA[6] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[1]   ; LRGA[5] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[8]   ; LRGA[5] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[7]   ; LRGA[5] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[6]   ; LRGA[5] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[5]   ; LRGA[5] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[4]   ; LRGA[5] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[3]   ; LRGA[5] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[1]   ; LRGA[4] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[8]   ; LRGA[4] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[7]   ; LRGA[4] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[6]   ; LRGA[4] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[5]   ; LRGA[4] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[4]   ; LRGA[4] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[3]   ; LRGA[4] ; CCKD         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[2]   ; LRGA[8] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[2]   ; LRGA[7] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[2]   ; LRGA[6] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[2]   ; LRGA[5] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[2]   ; LRGA[4] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[1]   ; LRGA[8] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[8]   ; LRGA[8] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[7]   ; LRGA[8] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[6]   ; LRGA[8] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[5]   ; LRGA[8] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[4]   ; LRGA[8] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[3]   ; LRGA[8] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[1]   ; LRGA[7] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[8]   ; LRGA[7] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[7]   ; LRGA[7] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[6]   ; LRGA[7] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[5]   ; LRGA[7] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[4]   ; LRGA[7] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[3]   ; LRGA[7] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[1]   ; LRGA[6] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[8]   ; LRGA[6] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[7]   ; LRGA[6] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[6]   ; LRGA[6] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[5]   ; LRGA[6] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[4]   ; LRGA[6] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[3]   ; LRGA[6] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[1]   ; LRGA[5] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[8]   ; LRGA[5] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[7]   ; LRGA[5] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[6]   ; LRGA[5] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[5]   ; LRGA[5] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[4]   ; LRGA[5] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[3]   ; LRGA[5] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[1]   ; LRGA[4] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[8]   ; LRGA[4] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[7]   ; LRGA[4] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[6]   ; LRGA[4] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[5]   ; LRGA[4] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[4]   ; LRGA[4] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -21.000 ; LRGA[3]   ; LRGA[4] ; CCKQ         ; CCKQ        ; 1.000        ; 0.000      ; 19.000     ;
+; -14.500 ; LDRDI[15] ; LRGA[8] ; CCK          ; CCKQ        ; 0.500        ; 3.000      ; 15.000     ;
+; -14.500 ; LDRDI[15] ; LRGA[7] ; CCK          ; CCKQ        ; 0.500        ; 3.000      ; 15.000     ;
+; -14.500 ; LDRDI[15] ; LRGA[6] ; CCK          ; CCKQ        ; 0.500        ; 3.000      ; 15.000     ;
+; -14.500 ; LDRDI[15] ; LRGA[5] ; CCK          ; CCKQ        ; 0.500        ; 3.000      ; 15.000     ;
+; -14.500 ; LDRDI[15] ; LRGA[4] ; CCK          ; CCKQ        ; 0.500        ; 3.000      ; 15.000     ;
+; -14.500 ; LDRDI[13] ; LRGA[8] ; CCK          ; CCKQ        ; 0.500        ; 3.000      ; 15.000     ;
+; -14.500 ; LDRDI[12] ; LRGA[8] ; CCK          ; CCKQ        ; 0.500        ; 3.000      ; 15.000     ;
+; -14.500 ; LDRDI[13] ; LRGA[7] ; CCK          ; CCKQ        ; 0.500        ; 3.000      ; 15.000     ;
+; -14.500 ; LDRDI[12] ; LRGA[7] ; CCK          ; CCKQ        ; 0.500        ; 3.000      ; 15.000     ;
+; -14.500 ; LDRDI[13] ; LRGA[6] ; CCK          ; CCKQ        ; 0.500        ; 3.000      ; 15.000     ;
+; -14.500 ; LDRDI[12] ; LRGA[6] ; CCK          ; CCKQ        ; 0.500        ; 3.000      ; 15.000     ;
+; -14.500 ; LDRDI[13] ; LRGA[5] ; CCK          ; CCKQ        ; 0.500        ; 3.000      ; 15.000     ;
+; -14.500 ; LDRDI[12] ; LRGA[5] ; CCK          ; CCKQ        ; 0.500        ; 3.000      ; 15.000     ;
+; -14.500 ; LDRDI[13] ; LRGA[4] ; CCK          ; CCKQ        ; 0.500        ; 3.000      ; 15.000     ;
+; -14.500 ; LDRDI[12] ; LRGA[4] ; CCK          ; CCKQ        ; 0.500        ; 3.000      ; 15.000     ;
+; -9.500  ; LDRDI[14] ; LRGA[8] ; CCK          ; CCKQ        ; 0.500        ; 3.000      ; 10.000     ;
+; -9.500  ; LDRDI[14] ; LRGA[7] ; CCK          ; CCKQ        ; 0.500        ; 3.000      ; 10.000     ;
+; -9.500  ; LDRDI[14] ; LRGA[6] ; CCK          ; CCKQ        ; 0.500        ; 3.000      ; 10.000     ;
+; -9.500  ; LDRDI[14] ; LRGA[5] ; CCK          ; CCKQ        ; 0.500        ; 3.000      ; 10.000     ;
+; -9.500  ; LDRDI[14] ; LRGA[4] ; CCK          ; CCKQ        ; 0.500        ; 3.000      ; 10.000     ;
++---------+-----------+---------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Hold: 'CCKD'                                                                                       ;
++--------+-----------+---------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+---------+--------------+-------------+--------------+------------+------------+
+; 5.500  ; LDRDI[14] ; LRGA[8] ; CCK          ; CCKD        ; -0.500       ; 3.000      ; 10.000     ;
+; 5.500  ; LDRDI[14] ; LRGA[7] ; CCK          ; CCKD        ; -0.500       ; 3.000      ; 10.000     ;
+; 5.500  ; LDRDI[14] ; LRGA[6] ; CCK          ; CCKD        ; -0.500       ; 3.000      ; 10.000     ;
+; 5.500  ; LDRDI[14] ; LRGA[5] ; CCK          ; CCKD        ; -0.500       ; 3.000      ; 10.000     ;
+; 5.500  ; LDRDI[14] ; LRGA[4] ; CCK          ; CCKD        ; -0.500       ; 3.000      ; 10.000     ;
+; 8.000  ; LRGA[2]   ; LRGA[8] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[2]   ; LRGA[7] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[2]   ; LRGA[6] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[2]   ; LRGA[5] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[2]   ; LRGA[4] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[1]   ; LRGA[8] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[8]   ; LRGA[8] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[7]   ; LRGA[8] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[6]   ; LRGA[8] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[5]   ; LRGA[8] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[4]   ; LRGA[8] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[3]   ; LRGA[8] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[1]   ; LRGA[7] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[8]   ; LRGA[7] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[7]   ; LRGA[7] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[6]   ; LRGA[7] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[5]   ; LRGA[7] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[4]   ; LRGA[7] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[3]   ; LRGA[7] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[1]   ; LRGA[6] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[8]   ; LRGA[6] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[7]   ; LRGA[6] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[6]   ; LRGA[6] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[5]   ; LRGA[6] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[4]   ; LRGA[6] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[3]   ; LRGA[6] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[1]   ; LRGA[5] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[8]   ; LRGA[5] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[7]   ; LRGA[5] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[6]   ; LRGA[5] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[5]   ; LRGA[5] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[4]   ; LRGA[5] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[3]   ; LRGA[5] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[1]   ; LRGA[4] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[8]   ; LRGA[4] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[7]   ; LRGA[4] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[6]   ; LRGA[4] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[5]   ; LRGA[4] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[4]   ; LRGA[4] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[3]   ; LRGA[4] ; CCKD         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[2]   ; LRGA[8] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[2]   ; LRGA[7] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[2]   ; LRGA[6] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[2]   ; LRGA[5] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[2]   ; LRGA[4] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[1]   ; LRGA[8] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[8]   ; LRGA[8] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[7]   ; LRGA[8] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[6]   ; LRGA[8] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[5]   ; LRGA[8] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[4]   ; LRGA[8] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[3]   ; LRGA[8] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[1]   ; LRGA[7] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[8]   ; LRGA[7] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[7]   ; LRGA[7] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[6]   ; LRGA[7] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[5]   ; LRGA[7] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[4]   ; LRGA[7] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[3]   ; LRGA[7] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[1]   ; LRGA[6] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[8]   ; LRGA[6] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[7]   ; LRGA[6] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[6]   ; LRGA[6] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[5]   ; LRGA[6] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[4]   ; LRGA[6] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[3]   ; LRGA[6] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[1]   ; LRGA[5] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[8]   ; LRGA[5] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[7]   ; LRGA[5] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[6]   ; LRGA[5] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[5]   ; LRGA[5] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[4]   ; LRGA[5] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[3]   ; LRGA[5] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[1]   ; LRGA[4] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[8]   ; LRGA[4] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[7]   ; LRGA[4] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[6]   ; LRGA[4] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[5]   ; LRGA[4] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[4]   ; LRGA[4] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[3]   ; LRGA[4] ; CCKQ         ; CCKD        ; 0.000        ; 0.000      ; 10.000     ;
+; 10.500 ; LDRDI[15] ; LRGA[8] ; CCK          ; CCKD        ; -0.500       ; 3.000      ; 15.000     ;
+; 10.500 ; LDRDI[15] ; LRGA[7] ; CCK          ; CCKD        ; -0.500       ; 3.000      ; 15.000     ;
+; 10.500 ; LDRDI[15] ; LRGA[6] ; CCK          ; CCKD        ; -0.500       ; 3.000      ; 15.000     ;
+; 10.500 ; LDRDI[15] ; LRGA[5] ; CCK          ; CCKD        ; -0.500       ; 3.000      ; 15.000     ;
+; 10.500 ; LDRDI[15] ; LRGA[4] ; CCK          ; CCKD        ; -0.500       ; 3.000      ; 15.000     ;
+; 10.500 ; LDRDI[13] ; LRGA[8] ; CCK          ; CCKD        ; -0.500       ; 3.000      ; 15.000     ;
+; 10.500 ; LDRDI[12] ; LRGA[8] ; CCK          ; CCKD        ; -0.500       ; 3.000      ; 15.000     ;
+; 10.500 ; LDRDI[13] ; LRGA[7] ; CCK          ; CCKD        ; -0.500       ; 3.000      ; 15.000     ;
+; 10.500 ; LDRDI[12] ; LRGA[7] ; CCK          ; CCKD        ; -0.500       ; 3.000      ; 15.000     ;
+; 10.500 ; LDRDI[13] ; LRGA[6] ; CCK          ; CCKD        ; -0.500       ; 3.000      ; 15.000     ;
+; 10.500 ; LDRDI[12] ; LRGA[6] ; CCK          ; CCKD        ; -0.500       ; 3.000      ; 15.000     ;
+; 10.500 ; LDRDI[13] ; LRGA[5] ; CCK          ; CCKD        ; -0.500       ; 3.000      ; 15.000     ;
+; 10.500 ; LDRDI[12] ; LRGA[5] ; CCK          ; CCKD        ; -0.500       ; 3.000      ; 15.000     ;
+; 10.500 ; LDRDI[13] ; LRGA[4] ; CCK          ; CCKD        ; -0.500       ; 3.000      ; 15.000     ;
+; 10.500 ; LDRDI[12] ; LRGA[4] ; CCK          ; CCKD        ; -0.500       ; 3.000      ; 15.000     ;
++--------+-----------+---------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Hold: 'CCKQ'                                                                                       ;
++--------+-----------+---------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+---------+--------------+-------------+--------------+------------+------------+
+; 5.500  ; LDRDI[14] ; LRGA[8] ; CCK          ; CCKQ        ; -0.500       ; 3.000      ; 10.000     ;
+; 5.500  ; LDRDI[14] ; LRGA[7] ; CCK          ; CCKQ        ; -0.500       ; 3.000      ; 10.000     ;
+; 5.500  ; LDRDI[14] ; LRGA[6] ; CCK          ; CCKQ        ; -0.500       ; 3.000      ; 10.000     ;
+; 5.500  ; LDRDI[14] ; LRGA[5] ; CCK          ; CCKQ        ; -0.500       ; 3.000      ; 10.000     ;
+; 5.500  ; LDRDI[14] ; LRGA[4] ; CCK          ; CCKQ        ; -0.500       ; 3.000      ; 10.000     ;
+; 8.000  ; LRGA[2]   ; LRGA[8] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[2]   ; LRGA[7] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[2]   ; LRGA[6] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[2]   ; LRGA[5] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[2]   ; LRGA[4] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[1]   ; LRGA[8] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[8]   ; LRGA[8] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[7]   ; LRGA[8] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[6]   ; LRGA[8] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[5]   ; LRGA[8] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[4]   ; LRGA[8] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[3]   ; LRGA[8] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[1]   ; LRGA[7] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[8]   ; LRGA[7] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[7]   ; LRGA[7] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[6]   ; LRGA[7] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[5]   ; LRGA[7] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[4]   ; LRGA[7] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[3]   ; LRGA[7] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[1]   ; LRGA[6] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[8]   ; LRGA[6] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[7]   ; LRGA[6] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[6]   ; LRGA[6] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[5]   ; LRGA[6] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[4]   ; LRGA[6] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[3]   ; LRGA[6] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[1]   ; LRGA[5] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[8]   ; LRGA[5] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[7]   ; LRGA[5] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[6]   ; LRGA[5] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[5]   ; LRGA[5] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[4]   ; LRGA[5] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[3]   ; LRGA[5] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[1]   ; LRGA[4] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[8]   ; LRGA[4] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[7]   ; LRGA[4] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[6]   ; LRGA[4] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[5]   ; LRGA[4] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[4]   ; LRGA[4] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[3]   ; LRGA[4] ; CCKD         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[2]   ; LRGA[8] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[2]   ; LRGA[7] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[2]   ; LRGA[6] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[2]   ; LRGA[5] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[2]   ; LRGA[4] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[1]   ; LRGA[8] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[8]   ; LRGA[8] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[7]   ; LRGA[8] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[6]   ; LRGA[8] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[5]   ; LRGA[8] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[4]   ; LRGA[8] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[3]   ; LRGA[8] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[1]   ; LRGA[7] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[8]   ; LRGA[7] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[7]   ; LRGA[7] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[6]   ; LRGA[7] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[5]   ; LRGA[7] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[4]   ; LRGA[7] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[3]   ; LRGA[7] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[1]   ; LRGA[6] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[8]   ; LRGA[6] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[7]   ; LRGA[6] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[6]   ; LRGA[6] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[5]   ; LRGA[6] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[4]   ; LRGA[6] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[3]   ; LRGA[6] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[1]   ; LRGA[5] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[8]   ; LRGA[5] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[7]   ; LRGA[5] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[6]   ; LRGA[5] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[5]   ; LRGA[5] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[4]   ; LRGA[5] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[3]   ; LRGA[5] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[1]   ; LRGA[4] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[8]   ; LRGA[4] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[7]   ; LRGA[4] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[6]   ; LRGA[4] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[5]   ; LRGA[4] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[4]   ; LRGA[4] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 8.000  ; LRGA[3]   ; LRGA[4] ; CCKQ         ; CCKQ        ; 0.000        ; 0.000      ; 10.000     ;
+; 10.500 ; LDRDI[15] ; LRGA[8] ; CCK          ; CCKQ        ; -0.500       ; 3.000      ; 15.000     ;
+; 10.500 ; LDRDI[15] ; LRGA[7] ; CCK          ; CCKQ        ; -0.500       ; 3.000      ; 15.000     ;
+; 10.500 ; LDRDI[15] ; LRGA[6] ; CCK          ; CCKQ        ; -0.500       ; 3.000      ; 15.000     ;
+; 10.500 ; LDRDI[15] ; LRGA[5] ; CCK          ; CCKQ        ; -0.500       ; 3.000      ; 15.000     ;
+; 10.500 ; LDRDI[15] ; LRGA[4] ; CCK          ; CCKQ        ; -0.500       ; 3.000      ; 15.000     ;
+; 10.500 ; LDRDI[13] ; LRGA[8] ; CCK          ; CCKQ        ; -0.500       ; 3.000      ; 15.000     ;
+; 10.500 ; LDRDI[12] ; LRGA[8] ; CCK          ; CCKQ        ; -0.500       ; 3.000      ; 15.000     ;
+; 10.500 ; LDRDI[13] ; LRGA[7] ; CCK          ; CCKQ        ; -0.500       ; 3.000      ; 15.000     ;
+; 10.500 ; LDRDI[12] ; LRGA[7] ; CCK          ; CCKQ        ; -0.500       ; 3.000      ; 15.000     ;
+; 10.500 ; LDRDI[13] ; LRGA[6] ; CCK          ; CCKQ        ; -0.500       ; 3.000      ; 15.000     ;
+; 10.500 ; LDRDI[12] ; LRGA[6] ; CCK          ; CCKQ        ; -0.500       ; 3.000      ; 15.000     ;
+; 10.500 ; LDRDI[13] ; LRGA[5] ; CCK          ; CCKQ        ; -0.500       ; 3.000      ; 15.000     ;
+; 10.500 ; LDRDI[12] ; LRGA[5] ; CCK          ; CCKQ        ; -0.500       ; 3.000      ; 15.000     ;
+; 10.500 ; LDRDI[13] ; LRGA[4] ; CCK          ; CCKQ        ; -0.500       ; 3.000      ; 15.000     ;
+; 10.500 ; LDRDI[12] ; LRGA[4] ; CCK          ; CCKQ        ; -0.500       ; 3.000      ; 15.000     ;
++--------+-----------+---------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'CCK'                                                                     ;
++--------+--------------+----------------+------------------+-------+------------+---------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target        ;
++--------+--------------+----------------+------------------+-------+------------+---------------+
+; -2.500 ; 0.500        ; 3.000          ; High Pulse Width ; CCK   ; Fall       ; LDRDI[10]     ;
+; -2.500 ; 0.500        ; 3.000          ; Low Pulse Width  ; CCK   ; Fall       ; LDRDI[10]     ;
+; -2.500 ; 0.500        ; 3.000          ; High Pulse Width ; CCK   ; Fall       ; LDRDI[11]     ;
+; -2.500 ; 0.500        ; 3.000          ; Low Pulse Width  ; CCK   ; Fall       ; LDRDI[11]     ;
+; -2.500 ; 0.500        ; 3.000          ; High Pulse Width ; CCK   ; Fall       ; LDRDI[12]     ;
+; -2.500 ; 0.500        ; 3.000          ; Low Pulse Width  ; CCK   ; Fall       ; LDRDI[12]     ;
+; -2.500 ; 0.500        ; 3.000          ; High Pulse Width ; CCK   ; Fall       ; LDRDI[13]     ;
+; -2.500 ; 0.500        ; 3.000          ; Low Pulse Width  ; CCK   ; Fall       ; LDRDI[13]     ;
+; -2.500 ; 0.500        ; 3.000          ; High Pulse Width ; CCK   ; Fall       ; LDRDI[14]     ;
+; -2.500 ; 0.500        ; 3.000          ; Low Pulse Width  ; CCK   ; Fall       ; LDRDI[14]     ;
+; -2.500 ; 0.500        ; 3.000          ; High Pulse Width ; CCK   ; Fall       ; LDRDI[15]     ;
+; -2.500 ; 0.500        ; 3.000          ; Low Pulse Width  ; CCK   ; Fall       ; LDRDI[15]     ;
+; -2.500 ; 0.500        ; 3.000          ; High Pulse Width ; CCK   ; Fall       ; LDRDI[8]      ;
+; -2.500 ; 0.500        ; 3.000          ; Low Pulse Width  ; CCK   ; Fall       ; LDRDI[8]      ;
+; -2.500 ; 0.500        ; 3.000          ; High Pulse Width ; CCK   ; Fall       ; LDRDI[9]      ;
+; -2.500 ; 0.500        ; 3.000          ; Low Pulse Width  ; CCK   ; Fall       ; LDRDI[9]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CCK   ; Rise       ; CCK|dataout   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CCK   ; Rise       ; CCK|dataout   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CCK   ; Rise       ; LDRDI[10]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CCK   ; Rise       ; LDRDI[10]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CCK   ; Rise       ; LDRDI[11]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CCK   ; Rise       ; LDRDI[11]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CCK   ; Rise       ; LDRDI[12]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CCK   ; Rise       ; LDRDI[12]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CCK   ; Rise       ; LDRDI[13]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CCK   ; Rise       ; LDRDI[13]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CCK   ; Rise       ; LDRDI[14]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CCK   ; Rise       ; LDRDI[14]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CCK   ; Rise       ; LDRDI[15]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CCK   ; Rise       ; LDRDI[15]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CCK   ; Rise       ; LDRDI[8]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CCK   ; Rise       ; LDRDI[8]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CCK   ; Rise       ; LDRDI[9]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CCK   ; Rise       ; LDRDI[9]|clk  ;
++--------+--------------+----------------+------------------+-------+------------+---------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'CCKD'                                                                   ;
++--------+--------------+----------------+------------------+-------+------------+--------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target       ;
++--------+--------------+----------------+------------------+-------+------------+--------------+
+; -2.500 ; 0.500        ; 3.000          ; High Pulse Width ; CCKD  ; Rise       ; LRGA[1]      ;
+; -2.500 ; 0.500        ; 3.000          ; Low Pulse Width  ; CCKD  ; Rise       ; LRGA[1]      ;
+; -2.500 ; 0.500        ; 3.000          ; High Pulse Width ; CCKD  ; Rise       ; LRGA[2]      ;
+; -2.500 ; 0.500        ; 3.000          ; Low Pulse Width  ; CCKD  ; Rise       ; LRGA[2]      ;
+; -2.500 ; 0.500        ; 3.000          ; High Pulse Width ; CCKD  ; Rise       ; LRGA[3]      ;
+; -2.500 ; 0.500        ; 3.000          ; Low Pulse Width  ; CCKD  ; Rise       ; LRGA[3]      ;
+; -2.500 ; 0.500        ; 3.000          ; High Pulse Width ; CCKD  ; Rise       ; LRGA[4]      ;
+; -2.500 ; 0.500        ; 3.000          ; Low Pulse Width  ; CCKD  ; Rise       ; LRGA[4]      ;
+; -2.500 ; 0.500        ; 3.000          ; High Pulse Width ; CCKD  ; Rise       ; LRGA[5]      ;
+; -2.500 ; 0.500        ; 3.000          ; Low Pulse Width  ; CCKD  ; Rise       ; LRGA[5]      ;
+; -2.500 ; 0.500        ; 3.000          ; High Pulse Width ; CCKD  ; Rise       ; LRGA[6]      ;
+; -2.500 ; 0.500        ; 3.000          ; Low Pulse Width  ; CCKD  ; Rise       ; LRGA[6]      ;
+; -2.500 ; 0.500        ; 3.000          ; High Pulse Width ; CCKD  ; Rise       ; LRGA[7]      ;
+; -2.500 ; 0.500        ; 3.000          ; Low Pulse Width  ; CCKD  ; Rise       ; LRGA[7]      ;
+; -2.500 ; 0.500        ; 3.000          ; High Pulse Width ; CCKD  ; Rise       ; LRGA[8]      ;
+; -2.500 ; 0.500        ; 3.000          ; Low Pulse Width  ; CCKD  ; Rise       ; LRGA[8]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CCKD  ; Rise       ; CCKD|dataout ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CCKD  ; Rise       ; CCKD|dataout ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CCKD  ; Rise       ; LRGA[1]|[3]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CCKD  ; Rise       ; LRGA[1]|[3]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CCKD  ; Rise       ; LRGA[2]|[3]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CCKD  ; Rise       ; LRGA[2]|[3]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CCKD  ; Rise       ; LRGA[3]|[3]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CCKD  ; Rise       ; LRGA[3]|[3]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CCKD  ; Rise       ; LRGA[4]|[5]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CCKD  ; Rise       ; LRGA[4]|[5]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CCKD  ; Rise       ; LRGA[5]|[5]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CCKD  ; Rise       ; LRGA[5]|[5]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CCKD  ; Rise       ; LRGA[6]|[5]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CCKD  ; Rise       ; LRGA[6]|[5]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CCKD  ; Rise       ; LRGA[7]|[5]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CCKD  ; Rise       ; LRGA[7]|[5]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CCKD  ; Rise       ; LRGA[8]|[5]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CCKD  ; Rise       ; LRGA[8]|[5]  ;
++--------+--------------+----------------+------------------+-------+------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'CCKQ'                                                                   ;
++--------+--------------+----------------+------------------+-------+------------+--------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target       ;
++--------+--------------+----------------+------------------+-------+------------+--------------+
+; -2.500 ; 0.500        ; 3.000          ; High Pulse Width ; CCKQ  ; Rise       ; LRGA[1]      ;
+; -2.500 ; 0.500        ; 3.000          ; Low Pulse Width  ; CCKQ  ; Rise       ; LRGA[1]      ;
+; -2.500 ; 0.500        ; 3.000          ; High Pulse Width ; CCKQ  ; Rise       ; LRGA[2]      ;
+; -2.500 ; 0.500        ; 3.000          ; Low Pulse Width  ; CCKQ  ; Rise       ; LRGA[2]      ;
+; -2.500 ; 0.500        ; 3.000          ; High Pulse Width ; CCKQ  ; Rise       ; LRGA[3]      ;
+; -2.500 ; 0.500        ; 3.000          ; Low Pulse Width  ; CCKQ  ; Rise       ; LRGA[3]      ;
+; -2.500 ; 0.500        ; 3.000          ; High Pulse Width ; CCKQ  ; Rise       ; LRGA[4]      ;
+; -2.500 ; 0.500        ; 3.000          ; Low Pulse Width  ; CCKQ  ; Rise       ; LRGA[4]      ;
+; -2.500 ; 0.500        ; 3.000          ; High Pulse Width ; CCKQ  ; Rise       ; LRGA[5]      ;
+; -2.500 ; 0.500        ; 3.000          ; Low Pulse Width  ; CCKQ  ; Rise       ; LRGA[5]      ;
+; -2.500 ; 0.500        ; 3.000          ; High Pulse Width ; CCKQ  ; Rise       ; LRGA[6]      ;
+; -2.500 ; 0.500        ; 3.000          ; Low Pulse Width  ; CCKQ  ; Rise       ; LRGA[6]      ;
+; -2.500 ; 0.500        ; 3.000          ; High Pulse Width ; CCKQ  ; Rise       ; LRGA[7]      ;
+; -2.500 ; 0.500        ; 3.000          ; Low Pulse Width  ; CCKQ  ; Rise       ; LRGA[7]      ;
+; -2.500 ; 0.500        ; 3.000          ; High Pulse Width ; CCKQ  ; Rise       ; LRGA[8]      ;
+; -2.500 ; 0.500        ; 3.000          ; Low Pulse Width  ; CCKQ  ; Rise       ; LRGA[8]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CCKQ  ; Rise       ; CCKQ|dataout ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CCKQ  ; Rise       ; CCKQ|dataout ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CCKQ  ; Rise       ; LRGA[1]|[2]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CCKQ  ; Rise       ; LRGA[1]|[2]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CCKQ  ; Rise       ; LRGA[2]|[2]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CCKQ  ; Rise       ; LRGA[2]|[2]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CCKQ  ; Rise       ; LRGA[3]|[2]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CCKQ  ; Rise       ; LRGA[3]|[2]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CCKQ  ; Rise       ; LRGA[4]|[4]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CCKQ  ; Rise       ; LRGA[4]|[4]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CCKQ  ; Rise       ; LRGA[5]|[4]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CCKQ  ; Rise       ; LRGA[5]|[4]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CCKQ  ; Rise       ; LRGA[6]|[4]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CCKQ  ; Rise       ; LRGA[6]|[4]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CCKQ  ; Rise       ; LRGA[7]|[4]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CCKQ  ; Rise       ; LRGA[7]|[4]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CCKQ  ; Rise       ; LRGA[8]|[4]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CCKQ  ; Rise       ; LRGA[8]|[4]  ;
++--------+--------------+----------------+------------------+-------+------------+--------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; DRDI[*]   ; CCK        ; 6.000 ; 6.000 ; Fall       ; CCK             ;
+;  DRDI[8]  ; CCK        ; 6.000 ; 6.000 ; Fall       ; CCK             ;
+;  DRDI[9]  ; CCK        ; 6.000 ; 6.000 ; Fall       ; CCK             ;
+;  DRDI[10] ; CCK        ; 6.000 ; 6.000 ; Fall       ; CCK             ;
+;  DRDI[11] ; CCK        ; 6.000 ; 6.000 ; Fall       ; CCK             ;
+;  DRDI[12] ; CCK        ; 6.000 ; 6.000 ; Fall       ; CCK             ;
+;  DRDI[13] ; CCK        ; 6.000 ; 6.000 ; Fall       ; CCK             ;
+;  DRDI[14] ; CCK        ; 6.000 ; 6.000 ; Fall       ; CCK             ;
+;  DRDI[15] ; CCK        ; 6.000 ; 6.000 ; Fall       ; CCK             ;
+; _RST      ; CCK        ; 6.000 ; 6.000 ; Fall       ; CCK             ;
+; RGA[*]    ; CCKD       ; 3.000 ; 3.000 ; Rise       ; CCKD            ;
+;  RGA[1]   ; CCKD       ; 3.000 ; 3.000 ; Rise       ; CCKD            ;
+;  RGA[2]   ; CCKD       ; 3.000 ; 3.000 ; Rise       ; CCKD            ;
+;  RGA[3]   ; CCKD       ; 3.000 ; 3.000 ; Rise       ; CCKD            ;
+;  RGA[4]   ; CCKD       ; 3.000 ; 3.000 ; Rise       ; CCKD            ;
+;  RGA[5]   ; CCKD       ; 3.000 ; 3.000 ; Rise       ; CCKD            ;
+;  RGA[6]   ; CCKD       ; 3.000 ; 3.000 ; Rise       ; CCKD            ;
+;  RGA[7]   ; CCKD       ; 3.000 ; 3.000 ; Rise       ; CCKD            ;
+;  RGA[8]   ; CCKD       ; 3.000 ; 3.000 ; Rise       ; CCKD            ;
+; _RST      ; CCKD       ; 3.000 ; 3.000 ; Rise       ; CCKD            ;
+; RGA[*]    ; CCKQ       ; 3.000 ; 3.000 ; Rise       ; CCKQ            ;
+;  RGA[1]   ; CCKQ       ; 3.000 ; 3.000 ; Rise       ; CCKQ            ;
+;  RGA[2]   ; CCKQ       ; 3.000 ; 3.000 ; Rise       ; CCKQ            ;
+;  RGA[3]   ; CCKQ       ; 3.000 ; 3.000 ; Rise       ; CCKQ            ;
+;  RGA[4]   ; CCKQ       ; 3.000 ; 3.000 ; Rise       ; CCKQ            ;
+;  RGA[5]   ; CCKQ       ; 3.000 ; 3.000 ; Rise       ; CCKQ            ;
+;  RGA[6]   ; CCKQ       ; 3.000 ; 3.000 ; Rise       ; CCKQ            ;
+;  RGA[7]   ; CCKQ       ; 3.000 ; 3.000 ; Rise       ; CCKQ            ;
+;  RGA[8]   ; CCKQ       ; 3.000 ; 3.000 ; Rise       ; CCKQ            ;
+; _RST      ; CCKQ       ; 3.000 ; 3.000 ; Rise       ; CCKQ            ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; DRDI[*]   ; CCK        ; -1.000 ; -1.000 ; Fall       ; CCK             ;
+;  DRDI[8]  ; CCK        ; -1.000 ; -1.000 ; Fall       ; CCK             ;
+;  DRDI[9]  ; CCK        ; -1.000 ; -1.000 ; Fall       ; CCK             ;
+;  DRDI[10] ; CCK        ; -1.000 ; -1.000 ; Fall       ; CCK             ;
+;  DRDI[11] ; CCK        ; -1.000 ; -1.000 ; Fall       ; CCK             ;
+;  DRDI[12] ; CCK        ; -1.000 ; -1.000 ; Fall       ; CCK             ;
+;  DRDI[13] ; CCK        ; -1.000 ; -1.000 ; Fall       ; CCK             ;
+;  DRDI[14] ; CCK        ; -1.000 ; -1.000 ; Fall       ; CCK             ;
+;  DRDI[15] ; CCK        ; -1.000 ; -1.000 ; Fall       ; CCK             ;
+; _RST      ; CCK        ; -1.000 ; -1.000 ; Fall       ; CCK             ;
+; RGA[*]    ; CCKD       ; 2.000  ; 2.000  ; Rise       ; CCKD            ;
+;  RGA[1]   ; CCKD       ; 2.000  ; 2.000  ; Rise       ; CCKD            ;
+;  RGA[2]   ; CCKD       ; 2.000  ; 2.000  ; Rise       ; CCKD            ;
+;  RGA[3]   ; CCKD       ; 2.000  ; 2.000  ; Rise       ; CCKD            ;
+;  RGA[4]   ; CCKD       ; 2.000  ; 2.000  ; Rise       ; CCKD            ;
+;  RGA[5]   ; CCKD       ; 2.000  ; 2.000  ; Rise       ; CCKD            ;
+;  RGA[6]   ; CCKD       ; 2.000  ; 2.000  ; Rise       ; CCKD            ;
+;  RGA[7]   ; CCKD       ; 2.000  ; 2.000  ; Rise       ; CCKD            ;
+;  RGA[8]   ; CCKD       ; 2.000  ; 2.000  ; Rise       ; CCKD            ;
+; _RST      ; CCKD       ; 2.000  ; 2.000  ; Rise       ; CCKD            ;
+; RGA[*]    ; CCKQ       ; 2.000  ; 2.000  ; Rise       ; CCKQ            ;
+;  RGA[1]   ; CCKQ       ; 2.000  ; 2.000  ; Rise       ; CCKQ            ;
+;  RGA[2]   ; CCKQ       ; 2.000  ; 2.000  ; Rise       ; CCKQ            ;
+;  RGA[3]   ; CCKQ       ; 2.000  ; 2.000  ; Rise       ; CCKQ            ;
+;  RGA[4]   ; CCKQ       ; 2.000  ; 2.000  ; Rise       ; CCKQ            ;
+;  RGA[5]   ; CCKQ       ; 2.000  ; 2.000  ; Rise       ; CCKQ            ;
+;  RGA[6]   ; CCKQ       ; 2.000  ; 2.000  ; Rise       ; CCKQ            ;
+;  RGA[7]   ; CCKQ       ; 2.000  ; 2.000  ; Rise       ; CCKQ            ;
+;  RGA[8]   ; CCKQ       ; 2.000  ; 2.000  ; Rise       ; CCKQ            ;
+; _RST      ; CCKQ       ; 2.000  ; 2.000  ; Rise       ; CCKQ            ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; BANKSEL[*]   ; CCK        ; 18.500 ; 18.500 ; Fall       ; CCK             ;
+;  BANKSEL[0]  ; CCK        ; 18.500 ; 18.500 ; Fall       ; CCK             ;
+;  BANKSEL[1]  ; CCK        ; 18.500 ; 18.500 ; Fall       ; CCK             ;
+;  BANKSEL[2]  ; CCK        ; 18.500 ; 18.500 ; Fall       ; CCK             ;
+;  BANKSEL[3]  ; CCK        ; 18.500 ; 18.500 ; Fall       ; CCK             ;
+;  BANKSEL[4]  ; CCK        ; 18.500 ; 18.500 ; Fall       ; CCK             ;
+;  BANKSEL[5]  ; CCK        ; 18.500 ; 18.500 ; Fall       ; CCK             ;
+;  BANKSEL[6]  ; CCK        ; 18.500 ; 18.500 ; Fall       ; CCK             ;
+;  BANKSEL[7]  ; CCK        ; 18.500 ; 18.500 ; Fall       ; CCK             ;
+;  BANKSEL[8]  ; CCK        ; 9.500  ; 9.500  ; Fall       ; CCK             ;
+;  BANKSEL[9]  ; CCK        ; 9.500  ; 9.500  ; Fall       ; CCK             ;
+;  BANKSEL[10] ; CCK        ; 9.500  ; 9.500  ; Fall       ; CCK             ;
+;  BANKSEL[11] ; CCK        ; 9.500  ; 9.500  ; Fall       ; CCK             ;
+;  BANKSEL[12] ; CCK        ; 9.500  ; 9.500  ; Fall       ; CCK             ;
+;  BANKSEL[13] ; CCK        ; 9.500  ; 9.500  ; Fall       ; CCK             ;
+;  BANKSEL[14] ; CCK        ; 9.500  ; 9.500  ; Fall       ; CCK             ;
+;  BANKSEL[15] ; CCK        ; 9.500  ; 9.500  ; Fall       ; CCK             ;
+; DRDO[*]      ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+;  DRDO[0]     ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+;  DRDO[1]     ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+;  DRDO[2]     ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+;  DRDO[3]     ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+;  DRDO[4]     ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+;  DRDO[5]     ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+;  DRDO[6]     ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+;  DRDO[7]     ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+; LED1         ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+; LED2         ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+; LED3         ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+; BANKSEL[*]   ; CCKD       ; 25.500 ; 25.500 ; Rise       ; CCKD            ;
+;  BANKSEL[0]  ; CCKD       ; 25.500 ; 25.500 ; Rise       ; CCKD            ;
+;  BANKSEL[1]  ; CCKD       ; 25.500 ; 25.500 ; Rise       ; CCKD            ;
+;  BANKSEL[2]  ; CCKD       ; 25.500 ; 25.500 ; Rise       ; CCKD            ;
+;  BANKSEL[3]  ; CCKD       ; 25.500 ; 25.500 ; Rise       ; CCKD            ;
+;  BANKSEL[4]  ; CCKD       ; 25.500 ; 25.500 ; Rise       ; CCKD            ;
+;  BANKSEL[5]  ; CCKD       ; 25.500 ; 25.500 ; Rise       ; CCKD            ;
+;  BANKSEL[6]  ; CCKD       ; 25.500 ; 25.500 ; Rise       ; CCKD            ;
+;  BANKSEL[7]  ; CCKD       ; 25.500 ; 25.500 ; Rise       ; CCKD            ;
+;  BANKSEL[8]  ; CCKD       ; 16.500 ; 16.500 ; Rise       ; CCKD            ;
+;  BANKSEL[9]  ; CCKD       ; 16.500 ; 16.500 ; Rise       ; CCKD            ;
+;  BANKSEL[10] ; CCKD       ; 16.500 ; 16.500 ; Rise       ; CCKD            ;
+;  BANKSEL[11] ; CCKD       ; 16.500 ; 16.500 ; Rise       ; CCKD            ;
+;  BANKSEL[12] ; CCKD       ; 16.500 ; 16.500 ; Rise       ; CCKD            ;
+;  BANKSEL[13] ; CCKD       ; 16.500 ; 16.500 ; Rise       ; CCKD            ;
+;  BANKSEL[14] ; CCKD       ; 16.500 ; 16.500 ; Rise       ; CCKD            ;
+;  BANKSEL[15] ; CCKD       ; 16.500 ; 16.500 ; Rise       ; CCKD            ;
+; DRDO[*]      ; CCKD       ; 21.500 ; 21.500 ; Rise       ; CCKD            ;
+;  DRDO[0]     ; CCKD       ; 21.500 ; 21.500 ; Rise       ; CCKD            ;
+;  DRDO[1]     ; CCKD       ; 21.500 ; 21.500 ; Rise       ; CCKD            ;
+;  DRDO[2]     ; CCKD       ; 21.500 ; 21.500 ; Rise       ; CCKD            ;
+;  DRDO[3]     ; CCKD       ; 21.500 ; 21.500 ; Rise       ; CCKD            ;
+;  DRDO[4]     ; CCKD       ; 21.500 ; 21.500 ; Rise       ; CCKD            ;
+;  DRDO[5]     ; CCKD       ; 21.500 ; 21.500 ; Rise       ; CCKD            ;
+;  DRDO[6]     ; CCKD       ; 21.500 ; 21.500 ; Rise       ; CCKD            ;
+;  DRDO[7]     ; CCKD       ; 21.500 ; 21.500 ; Rise       ; CCKD            ;
+; LED1         ; CCKD       ; 21.500 ; 21.500 ; Rise       ; CCKD            ;
+; LED2         ; CCKD       ; 21.500 ; 21.500 ; Rise       ; CCKD            ;
+; LED3         ; CCKD       ; 21.500 ; 21.500 ; Rise       ; CCKD            ;
+; BANKSEL[*]   ; CCKQ       ; 25.500 ; 25.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[0]  ; CCKQ       ; 25.500 ; 25.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[1]  ; CCKQ       ; 25.500 ; 25.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[2]  ; CCKQ       ; 25.500 ; 25.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[3]  ; CCKQ       ; 25.500 ; 25.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[4]  ; CCKQ       ; 25.500 ; 25.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[5]  ; CCKQ       ; 25.500 ; 25.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[6]  ; CCKQ       ; 25.500 ; 25.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[7]  ; CCKQ       ; 25.500 ; 25.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[8]  ; CCKQ       ; 16.500 ; 16.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[9]  ; CCKQ       ; 16.500 ; 16.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[10] ; CCKQ       ; 16.500 ; 16.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[11] ; CCKQ       ; 16.500 ; 16.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[12] ; CCKQ       ; 16.500 ; 16.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[13] ; CCKQ       ; 16.500 ; 16.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[14] ; CCKQ       ; 16.500 ; 16.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[15] ; CCKQ       ; 16.500 ; 16.500 ; Rise       ; CCKQ            ;
+; DRDO[*]      ; CCKQ       ; 21.500 ; 21.500 ; Rise       ; CCKQ            ;
+;  DRDO[0]     ; CCKQ       ; 21.500 ; 21.500 ; Rise       ; CCKQ            ;
+;  DRDO[1]     ; CCKQ       ; 21.500 ; 21.500 ; Rise       ; CCKQ            ;
+;  DRDO[2]     ; CCKQ       ; 21.500 ; 21.500 ; Rise       ; CCKQ            ;
+;  DRDO[3]     ; CCKQ       ; 21.500 ; 21.500 ; Rise       ; CCKQ            ;
+;  DRDO[4]     ; CCKQ       ; 21.500 ; 21.500 ; Rise       ; CCKQ            ;
+;  DRDO[5]     ; CCKQ       ; 21.500 ; 21.500 ; Rise       ; CCKQ            ;
+;  DRDO[6]     ; CCKQ       ; 21.500 ; 21.500 ; Rise       ; CCKQ            ;
+;  DRDO[7]     ; CCKQ       ; 21.500 ; 21.500 ; Rise       ; CCKQ            ;
+; LED1         ; CCKQ       ; 21.500 ; 21.500 ; Rise       ; CCKQ            ;
+; LED2         ; CCKQ       ; 21.500 ; 21.500 ; Rise       ; CCKQ            ;
+; LED3         ; CCKQ       ; 21.500 ; 21.500 ; Rise       ; CCKQ            ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; BANKSEL[*]   ; CCK        ; 9.500  ; 9.500  ; Fall       ; CCK             ;
+;  BANKSEL[0]  ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+;  BANKSEL[1]  ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+;  BANKSEL[2]  ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+;  BANKSEL[3]  ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+;  BANKSEL[4]  ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+;  BANKSEL[5]  ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+;  BANKSEL[6]  ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+;  BANKSEL[7]  ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+;  BANKSEL[8]  ; CCK        ; 9.500  ; 9.500  ; Fall       ; CCK             ;
+;  BANKSEL[9]  ; CCK        ; 9.500  ; 9.500  ; Fall       ; CCK             ;
+;  BANKSEL[10] ; CCK        ; 9.500  ; 9.500  ; Fall       ; CCK             ;
+;  BANKSEL[11] ; CCK        ; 9.500  ; 9.500  ; Fall       ; CCK             ;
+;  BANKSEL[12] ; CCK        ; 9.500  ; 9.500  ; Fall       ; CCK             ;
+;  BANKSEL[13] ; CCK        ; 9.500  ; 9.500  ; Fall       ; CCK             ;
+;  BANKSEL[14] ; CCK        ; 9.500  ; 9.500  ; Fall       ; CCK             ;
+;  BANKSEL[15] ; CCK        ; 9.500  ; 9.500  ; Fall       ; CCK             ;
+; DRDO[*]      ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+;  DRDO[0]     ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+;  DRDO[1]     ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+;  DRDO[2]     ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+;  DRDO[3]     ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+;  DRDO[4]     ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+;  DRDO[5]     ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+;  DRDO[6]     ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+;  DRDO[7]     ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+; LED1         ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+; LED2         ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+; LED3         ; CCK        ; 14.500 ; 14.500 ; Fall       ; CCK             ;
+; BANKSEL[*]   ; CCKD       ; 12.500 ; 12.500 ; Rise       ; CCKD            ;
+;  BANKSEL[0]  ; CCKD       ; 17.500 ; 17.500 ; Rise       ; CCKD            ;
+;  BANKSEL[1]  ; CCKD       ; 17.500 ; 17.500 ; Rise       ; CCKD            ;
+;  BANKSEL[2]  ; CCKD       ; 17.500 ; 17.500 ; Rise       ; CCKD            ;
+;  BANKSEL[3]  ; CCKD       ; 17.500 ; 17.500 ; Rise       ; CCKD            ;
+;  BANKSEL[4]  ; CCKD       ; 17.500 ; 17.500 ; Rise       ; CCKD            ;
+;  BANKSEL[5]  ; CCKD       ; 17.500 ; 17.500 ; Rise       ; CCKD            ;
+;  BANKSEL[6]  ; CCKD       ; 17.500 ; 17.500 ; Rise       ; CCKD            ;
+;  BANKSEL[7]  ; CCKD       ; 17.500 ; 17.500 ; Rise       ; CCKD            ;
+;  BANKSEL[8]  ; CCKD       ; 12.500 ; 12.500 ; Rise       ; CCKD            ;
+;  BANKSEL[9]  ; CCKD       ; 12.500 ; 12.500 ; Rise       ; CCKD            ;
+;  BANKSEL[10] ; CCKD       ; 12.500 ; 12.500 ; Rise       ; CCKD            ;
+;  BANKSEL[11] ; CCKD       ; 12.500 ; 12.500 ; Rise       ; CCKD            ;
+;  BANKSEL[12] ; CCKD       ; 12.500 ; 12.500 ; Rise       ; CCKD            ;
+;  BANKSEL[13] ; CCKD       ; 12.500 ; 12.500 ; Rise       ; CCKD            ;
+;  BANKSEL[14] ; CCKD       ; 12.500 ; 12.500 ; Rise       ; CCKD            ;
+;  BANKSEL[15] ; CCKD       ; 12.500 ; 12.500 ; Rise       ; CCKD            ;
+; DRDO[*]      ; CCKD       ; 12.500 ; 12.500 ; Rise       ; CCKD            ;
+;  DRDO[0]     ; CCKD       ; 12.500 ; 12.500 ; Rise       ; CCKD            ;
+;  DRDO[1]     ; CCKD       ; 12.500 ; 12.500 ; Rise       ; CCKD            ;
+;  DRDO[2]     ; CCKD       ; 12.500 ; 12.500 ; Rise       ; CCKD            ;
+;  DRDO[3]     ; CCKD       ; 12.500 ; 12.500 ; Rise       ; CCKD            ;
+;  DRDO[4]     ; CCKD       ; 12.500 ; 12.500 ; Rise       ; CCKD            ;
+;  DRDO[5]     ; CCKD       ; 12.500 ; 12.500 ; Rise       ; CCKD            ;
+;  DRDO[6]     ; CCKD       ; 12.500 ; 12.500 ; Rise       ; CCKD            ;
+;  DRDO[7]     ; CCKD       ; 12.500 ; 12.500 ; Rise       ; CCKD            ;
+; LED1         ; CCKD       ; 17.500 ; 17.500 ; Rise       ; CCKD            ;
+; LED2         ; CCKD       ; 17.500 ; 17.500 ; Rise       ; CCKD            ;
+; LED3         ; CCKD       ; 17.500 ; 17.500 ; Rise       ; CCKD            ;
+; BANKSEL[*]   ; CCKQ       ; 12.500 ; 12.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[0]  ; CCKQ       ; 17.500 ; 17.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[1]  ; CCKQ       ; 17.500 ; 17.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[2]  ; CCKQ       ; 17.500 ; 17.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[3]  ; CCKQ       ; 17.500 ; 17.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[4]  ; CCKQ       ; 17.500 ; 17.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[5]  ; CCKQ       ; 17.500 ; 17.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[6]  ; CCKQ       ; 17.500 ; 17.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[7]  ; CCKQ       ; 17.500 ; 17.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[8]  ; CCKQ       ; 12.500 ; 12.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[9]  ; CCKQ       ; 12.500 ; 12.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[10] ; CCKQ       ; 12.500 ; 12.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[11] ; CCKQ       ; 12.500 ; 12.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[12] ; CCKQ       ; 12.500 ; 12.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[13] ; CCKQ       ; 12.500 ; 12.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[14] ; CCKQ       ; 12.500 ; 12.500 ; Rise       ; CCKQ            ;
+;  BANKSEL[15] ; CCKQ       ; 12.500 ; 12.500 ; Rise       ; CCKQ            ;
+; DRDO[*]      ; CCKQ       ; 12.500 ; 12.500 ; Rise       ; CCKQ            ;
+;  DRDO[0]     ; CCKQ       ; 12.500 ; 12.500 ; Rise       ; CCKQ            ;
+;  DRDO[1]     ; CCKQ       ; 12.500 ; 12.500 ; Rise       ; CCKQ            ;
+;  DRDO[2]     ; CCKQ       ; 12.500 ; 12.500 ; Rise       ; CCKQ            ;
+;  DRDO[3]     ; CCKQ       ; 12.500 ; 12.500 ; Rise       ; CCKQ            ;
+;  DRDO[4]     ; CCKQ       ; 12.500 ; 12.500 ; Rise       ; CCKQ            ;
+;  DRDO[5]     ; CCKQ       ; 12.500 ; 12.500 ; Rise       ; CCKQ            ;
+;  DRDO[6]     ; CCKQ       ; 12.500 ; 12.500 ; Rise       ; CCKQ            ;
+;  DRDO[7]     ; CCKQ       ; 12.500 ; 12.500 ; Rise       ; CCKQ            ;
+; LED1         ; CCKQ       ; 17.500 ; 17.500 ; Rise       ; CCKQ            ;
+; LED2         ; CCKQ       ; 17.500 ; 17.500 ; Rise       ; CCKQ            ;
+; LED3         ; CCKQ       ; 17.500 ; 17.500 ; Rise       ; CCKQ            ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------+
+; Propagation Delay                                  ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; _RST       ; LED0        ; 7.500 ;    ;    ; 7.500 ;
++------------+-------------+-------+----+----+-------+
+
+
++----------------------------------------------------+
+; Minimum Propagation Delay                          ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; _RST       ; LED0        ; 7.500 ;    ;    ; 7.500 ;
++------------+-------------+-------+----+----+-------+
+
+
++-------------------------------------------------------------------------+
+; Output Enable Times                                                     ;
++-------------+------------+--------+------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+------+------------+-----------------+
+; BANKSEL[*]  ; CCK        ; 19.500 ;      ; Fall       ; CCK             ;
+;  BANKSEL[0] ; CCK        ; 19.500 ;      ; Fall       ; CCK             ;
+;  BANKSEL[1] ; CCK        ; 19.500 ;      ; Fall       ; CCK             ;
+;  BANKSEL[2] ; CCK        ; 19.500 ;      ; Fall       ; CCK             ;
+;  BANKSEL[3] ; CCK        ; 19.500 ;      ; Fall       ; CCK             ;
+;  BANKSEL[4] ; CCK        ; 19.500 ;      ; Fall       ; CCK             ;
+;  BANKSEL[5] ; CCK        ; 19.500 ;      ; Fall       ; CCK             ;
+;  BANKSEL[6] ; CCK        ; 19.500 ;      ; Fall       ; CCK             ;
+;  BANKSEL[7] ; CCK        ; 19.500 ;      ; Fall       ; CCK             ;
+; BANKSEL[*]  ; CCKD       ; 26.500 ;      ; Rise       ; CCKD            ;
+;  BANKSEL[0] ; CCKD       ; 26.500 ;      ; Rise       ; CCKD            ;
+;  BANKSEL[1] ; CCKD       ; 26.500 ;      ; Rise       ; CCKD            ;
+;  BANKSEL[2] ; CCKD       ; 26.500 ;      ; Rise       ; CCKD            ;
+;  BANKSEL[3] ; CCKD       ; 26.500 ;      ; Rise       ; CCKD            ;
+;  BANKSEL[4] ; CCKD       ; 26.500 ;      ; Rise       ; CCKD            ;
+;  BANKSEL[5] ; CCKD       ; 26.500 ;      ; Rise       ; CCKD            ;
+;  BANKSEL[6] ; CCKD       ; 26.500 ;      ; Rise       ; CCKD            ;
+;  BANKSEL[7] ; CCKD       ; 26.500 ;      ; Rise       ; CCKD            ;
+; DRDO[*]     ; CCKD       ; 17.500 ;      ; Rise       ; CCKD            ;
+;  DRDO[0]    ; CCKD       ; 17.500 ;      ; Rise       ; CCKD            ;
+;  DRDO[1]    ; CCKD       ; 17.500 ;      ; Rise       ; CCKD            ;
+;  DRDO[2]    ; CCKD       ; 17.500 ;      ; Rise       ; CCKD            ;
+;  DRDO[3]    ; CCKD       ; 17.500 ;      ; Rise       ; CCKD            ;
+;  DRDO[4]    ; CCKD       ; 17.500 ;      ; Rise       ; CCKD            ;
+;  DRDO[5]    ; CCKD       ; 17.500 ;      ; Rise       ; CCKD            ;
+;  DRDO[6]    ; CCKD       ; 17.500 ;      ; Rise       ; CCKD            ;
+;  DRDO[7]    ; CCKD       ; 17.500 ;      ; Rise       ; CCKD            ;
+; BANKSEL[*]  ; CCKQ       ; 26.500 ;      ; Rise       ; CCKQ            ;
+;  BANKSEL[0] ; CCKQ       ; 26.500 ;      ; Rise       ; CCKQ            ;
+;  BANKSEL[1] ; CCKQ       ; 26.500 ;      ; Rise       ; CCKQ            ;
+;  BANKSEL[2] ; CCKQ       ; 26.500 ;      ; Rise       ; CCKQ            ;
+;  BANKSEL[3] ; CCKQ       ; 26.500 ;      ; Rise       ; CCKQ            ;
+;  BANKSEL[4] ; CCKQ       ; 26.500 ;      ; Rise       ; CCKQ            ;
+;  BANKSEL[5] ; CCKQ       ; 26.500 ;      ; Rise       ; CCKQ            ;
+;  BANKSEL[6] ; CCKQ       ; 26.500 ;      ; Rise       ; CCKQ            ;
+;  BANKSEL[7] ; CCKQ       ; 26.500 ;      ; Rise       ; CCKQ            ;
+; DRDO[*]     ; CCKQ       ; 17.500 ;      ; Rise       ; CCKQ            ;
+;  DRDO[0]    ; CCKQ       ; 17.500 ;      ; Rise       ; CCKQ            ;
+;  DRDO[1]    ; CCKQ       ; 17.500 ;      ; Rise       ; CCKQ            ;
+;  DRDO[2]    ; CCKQ       ; 17.500 ;      ; Rise       ; CCKQ            ;
+;  DRDO[3]    ; CCKQ       ; 17.500 ;      ; Rise       ; CCKQ            ;
+;  DRDO[4]    ; CCKQ       ; 17.500 ;      ; Rise       ; CCKQ            ;
+;  DRDO[5]    ; CCKQ       ; 17.500 ;      ; Rise       ; CCKQ            ;
+;  DRDO[6]    ; CCKQ       ; 17.500 ;      ; Rise       ; CCKQ            ;
+;  DRDO[7]    ; CCKQ       ; 17.500 ;      ; Rise       ; CCKQ            ;
++-------------+------------+--------+------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Output Enable Times                                             ;
++-------------+------------+--------+------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+------+------------+-----------------+
+; BANKSEL[*]  ; CCK        ; 19.500 ;      ; Fall       ; CCK             ;
+;  BANKSEL[0] ; CCK        ; 19.500 ;      ; Fall       ; CCK             ;
+;  BANKSEL[1] ; CCK        ; 19.500 ;      ; Fall       ; CCK             ;
+;  BANKSEL[2] ; CCK        ; 19.500 ;      ; Fall       ; CCK             ;
+;  BANKSEL[3] ; CCK        ; 19.500 ;      ; Fall       ; CCK             ;
+;  BANKSEL[4] ; CCK        ; 19.500 ;      ; Fall       ; CCK             ;
+;  BANKSEL[5] ; CCK        ; 19.500 ;      ; Fall       ; CCK             ;
+;  BANKSEL[6] ; CCK        ; 19.500 ;      ; Fall       ; CCK             ;
+;  BANKSEL[7] ; CCK        ; 19.500 ;      ; Fall       ; CCK             ;
+; BANKSEL[*]  ; CCKD       ; 22.500 ;      ; Rise       ; CCKD            ;
+;  BANKSEL[0] ; CCKD       ; 22.500 ;      ; Rise       ; CCKD            ;
+;  BANKSEL[1] ; CCKD       ; 22.500 ;      ; Rise       ; CCKD            ;
+;  BANKSEL[2] ; CCKD       ; 22.500 ;      ; Rise       ; CCKD            ;
+;  BANKSEL[3] ; CCKD       ; 22.500 ;      ; Rise       ; CCKD            ;
+;  BANKSEL[4] ; CCKD       ; 22.500 ;      ; Rise       ; CCKD            ;
+;  BANKSEL[5] ; CCKD       ; 22.500 ;      ; Rise       ; CCKD            ;
+;  BANKSEL[6] ; CCKD       ; 22.500 ;      ; Rise       ; CCKD            ;
+;  BANKSEL[7] ; CCKD       ; 22.500 ;      ; Rise       ; CCKD            ;
+; DRDO[*]     ; CCKD       ; 17.500 ;      ; Rise       ; CCKD            ;
+;  DRDO[0]    ; CCKD       ; 17.500 ;      ; Rise       ; CCKD            ;
+;  DRDO[1]    ; CCKD       ; 17.500 ;      ; Rise       ; CCKD            ;
+;  DRDO[2]    ; CCKD       ; 17.500 ;      ; Rise       ; CCKD            ;
+;  DRDO[3]    ; CCKD       ; 17.500 ;      ; Rise       ; CCKD            ;
+;  DRDO[4]    ; CCKD       ; 17.500 ;      ; Rise       ; CCKD            ;
+;  DRDO[5]    ; CCKD       ; 17.500 ;      ; Rise       ; CCKD            ;
+;  DRDO[6]    ; CCKD       ; 17.500 ;      ; Rise       ; CCKD            ;
+;  DRDO[7]    ; CCKD       ; 17.500 ;      ; Rise       ; CCKD            ;
+; BANKSEL[*]  ; CCKQ       ; 22.500 ;      ; Rise       ; CCKQ            ;
+;  BANKSEL[0] ; CCKQ       ; 22.500 ;      ; Rise       ; CCKQ            ;
+;  BANKSEL[1] ; CCKQ       ; 22.500 ;      ; Rise       ; CCKQ            ;
+;  BANKSEL[2] ; CCKQ       ; 22.500 ;      ; Rise       ; CCKQ            ;
+;  BANKSEL[3] ; CCKQ       ; 22.500 ;      ; Rise       ; CCKQ            ;
+;  BANKSEL[4] ; CCKQ       ; 22.500 ;      ; Rise       ; CCKQ            ;
+;  BANKSEL[5] ; CCKQ       ; 22.500 ;      ; Rise       ; CCKQ            ;
+;  BANKSEL[6] ; CCKQ       ; 22.500 ;      ; Rise       ; CCKQ            ;
+;  BANKSEL[7] ; CCKQ       ; 22.500 ;      ; Rise       ; CCKQ            ;
+; DRDO[*]     ; CCKQ       ; 17.500 ;      ; Rise       ; CCKQ            ;
+;  DRDO[0]    ; CCKQ       ; 17.500 ;      ; Rise       ; CCKQ            ;
+;  DRDO[1]    ; CCKQ       ; 17.500 ;      ; Rise       ; CCKQ            ;
+;  DRDO[2]    ; CCKQ       ; 17.500 ;      ; Rise       ; CCKQ            ;
+;  DRDO[3]    ; CCKQ       ; 17.500 ;      ; Rise       ; CCKQ            ;
+;  DRDO[4]    ; CCKQ       ; 17.500 ;      ; Rise       ; CCKQ            ;
+;  DRDO[5]    ; CCKQ       ; 17.500 ;      ; Rise       ; CCKQ            ;
+;  DRDO[6]    ; CCKQ       ; 17.500 ;      ; Rise       ; CCKQ            ;
+;  DRDO[7]    ; CCKQ       ; 17.500 ;      ; Rise       ; CCKQ            ;
++-------------+------------+--------+------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------+
+; Output Disable Times                                                            ;
++-------------+------------+-----------+-----------+------------+-----------------+
+; Data Port   ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++-------------+------------+-----------+-----------+------------+-----------------+
+; BANKSEL[*]  ; CCK        ; 19.500    ;           ; Fall       ; CCK             ;
+;  BANKSEL[0] ; CCK        ; 19.500    ;           ; Fall       ; CCK             ;
+;  BANKSEL[1] ; CCK        ; 19.500    ;           ; Fall       ; CCK             ;
+;  BANKSEL[2] ; CCK        ; 19.500    ;           ; Fall       ; CCK             ;
+;  BANKSEL[3] ; CCK        ; 19.500    ;           ; Fall       ; CCK             ;
+;  BANKSEL[4] ; CCK        ; 19.500    ;           ; Fall       ; CCK             ;
+;  BANKSEL[5] ; CCK        ; 19.500    ;           ; Fall       ; CCK             ;
+;  BANKSEL[6] ; CCK        ; 19.500    ;           ; Fall       ; CCK             ;
+;  BANKSEL[7] ; CCK        ; 19.500    ;           ; Fall       ; CCK             ;
+; BANKSEL[*]  ; CCKD       ; 26.500    ;           ; Rise       ; CCKD            ;
+;  BANKSEL[0] ; CCKD       ; 26.500    ;           ; Rise       ; CCKD            ;
+;  BANKSEL[1] ; CCKD       ; 26.500    ;           ; Rise       ; CCKD            ;
+;  BANKSEL[2] ; CCKD       ; 26.500    ;           ; Rise       ; CCKD            ;
+;  BANKSEL[3] ; CCKD       ; 26.500    ;           ; Rise       ; CCKD            ;
+;  BANKSEL[4] ; CCKD       ; 26.500    ;           ; Rise       ; CCKD            ;
+;  BANKSEL[5] ; CCKD       ; 26.500    ;           ; Rise       ; CCKD            ;
+;  BANKSEL[6] ; CCKD       ; 26.500    ;           ; Rise       ; CCKD            ;
+;  BANKSEL[7] ; CCKD       ; 26.500    ;           ; Rise       ; CCKD            ;
+; DRDO[*]     ; CCKD       ; 17.500    ;           ; Rise       ; CCKD            ;
+;  DRDO[0]    ; CCKD       ; 17.500    ;           ; Rise       ; CCKD            ;
+;  DRDO[1]    ; CCKD       ; 17.500    ;           ; Rise       ; CCKD            ;
+;  DRDO[2]    ; CCKD       ; 17.500    ;           ; Rise       ; CCKD            ;
+;  DRDO[3]    ; CCKD       ; 17.500    ;           ; Rise       ; CCKD            ;
+;  DRDO[4]    ; CCKD       ; 17.500    ;           ; Rise       ; CCKD            ;
+;  DRDO[5]    ; CCKD       ; 17.500    ;           ; Rise       ; CCKD            ;
+;  DRDO[6]    ; CCKD       ; 17.500    ;           ; Rise       ; CCKD            ;
+;  DRDO[7]    ; CCKD       ; 17.500    ;           ; Rise       ; CCKD            ;
+; BANKSEL[*]  ; CCKQ       ; 26.500    ;           ; Rise       ; CCKQ            ;
+;  BANKSEL[0] ; CCKQ       ; 26.500    ;           ; Rise       ; CCKQ            ;
+;  BANKSEL[1] ; CCKQ       ; 26.500    ;           ; Rise       ; CCKQ            ;
+;  BANKSEL[2] ; CCKQ       ; 26.500    ;           ; Rise       ; CCKQ            ;
+;  BANKSEL[3] ; CCKQ       ; 26.500    ;           ; Rise       ; CCKQ            ;
+;  BANKSEL[4] ; CCKQ       ; 26.500    ;           ; Rise       ; CCKQ            ;
+;  BANKSEL[5] ; CCKQ       ; 26.500    ;           ; Rise       ; CCKQ            ;
+;  BANKSEL[6] ; CCKQ       ; 26.500    ;           ; Rise       ; CCKQ            ;
+;  BANKSEL[7] ; CCKQ       ; 26.500    ;           ; Rise       ; CCKQ            ;
+; DRDO[*]     ; CCKQ       ; 17.500    ;           ; Rise       ; CCKQ            ;
+;  DRDO[0]    ; CCKQ       ; 17.500    ;           ; Rise       ; CCKQ            ;
+;  DRDO[1]    ; CCKQ       ; 17.500    ;           ; Rise       ; CCKQ            ;
+;  DRDO[2]    ; CCKQ       ; 17.500    ;           ; Rise       ; CCKQ            ;
+;  DRDO[3]    ; CCKQ       ; 17.500    ;           ; Rise       ; CCKQ            ;
+;  DRDO[4]    ; CCKQ       ; 17.500    ;           ; Rise       ; CCKQ            ;
+;  DRDO[5]    ; CCKQ       ; 17.500    ;           ; Rise       ; CCKQ            ;
+;  DRDO[6]    ; CCKQ       ; 17.500    ;           ; Rise       ; CCKQ            ;
+;  DRDO[7]    ; CCKQ       ; 17.500    ;           ; Rise       ; CCKQ            ;
++-------------+------------+-----------+-----------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------+
+; Minimum Output Disable Times                                                    ;
++-------------+------------+-----------+-----------+------------+-----------------+
+; Data Port   ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++-------------+------------+-----------+-----------+------------+-----------------+
+; BANKSEL[*]  ; CCK        ; 19.500    ;           ; Fall       ; CCK             ;
+;  BANKSEL[0] ; CCK        ; 19.500    ;           ; Fall       ; CCK             ;
+;  BANKSEL[1] ; CCK        ; 19.500    ;           ; Fall       ; CCK             ;
+;  BANKSEL[2] ; CCK        ; 19.500    ;           ; Fall       ; CCK             ;
+;  BANKSEL[3] ; CCK        ; 19.500    ;           ; Fall       ; CCK             ;
+;  BANKSEL[4] ; CCK        ; 19.500    ;           ; Fall       ; CCK             ;
+;  BANKSEL[5] ; CCK        ; 19.500    ;           ; Fall       ; CCK             ;
+;  BANKSEL[6] ; CCK        ; 19.500    ;           ; Fall       ; CCK             ;
+;  BANKSEL[7] ; CCK        ; 19.500    ;           ; Fall       ; CCK             ;
+; BANKSEL[*]  ; CCKD       ; 22.500    ;           ; Rise       ; CCKD            ;
+;  BANKSEL[0] ; CCKD       ; 22.500    ;           ; Rise       ; CCKD            ;
+;  BANKSEL[1] ; CCKD       ; 22.500    ;           ; Rise       ; CCKD            ;
+;  BANKSEL[2] ; CCKD       ; 22.500    ;           ; Rise       ; CCKD            ;
+;  BANKSEL[3] ; CCKD       ; 22.500    ;           ; Rise       ; CCKD            ;
+;  BANKSEL[4] ; CCKD       ; 22.500    ;           ; Rise       ; CCKD            ;
+;  BANKSEL[5] ; CCKD       ; 22.500    ;           ; Rise       ; CCKD            ;
+;  BANKSEL[6] ; CCKD       ; 22.500    ;           ; Rise       ; CCKD            ;
+;  BANKSEL[7] ; CCKD       ; 22.500    ;           ; Rise       ; CCKD            ;
+; DRDO[*]     ; CCKD       ; 17.500    ;           ; Rise       ; CCKD            ;
+;  DRDO[0]    ; CCKD       ; 17.500    ;           ; Rise       ; CCKD            ;
+;  DRDO[1]    ; CCKD       ; 17.500    ;           ; Rise       ; CCKD            ;
+;  DRDO[2]    ; CCKD       ; 17.500    ;           ; Rise       ; CCKD            ;
+;  DRDO[3]    ; CCKD       ; 17.500    ;           ; Rise       ; CCKD            ;
+;  DRDO[4]    ; CCKD       ; 17.500    ;           ; Rise       ; CCKD            ;
+;  DRDO[5]    ; CCKD       ; 17.500    ;           ; Rise       ; CCKD            ;
+;  DRDO[6]    ; CCKD       ; 17.500    ;           ; Rise       ; CCKD            ;
+;  DRDO[7]    ; CCKD       ; 17.500    ;           ; Rise       ; CCKD            ;
+; BANKSEL[*]  ; CCKQ       ; 22.500    ;           ; Rise       ; CCKQ            ;
+;  BANKSEL[0] ; CCKQ       ; 22.500    ;           ; Rise       ; CCKQ            ;
+;  BANKSEL[1] ; CCKQ       ; 22.500    ;           ; Rise       ; CCKQ            ;
+;  BANKSEL[2] ; CCKQ       ; 22.500    ;           ; Rise       ; CCKQ            ;
+;  BANKSEL[3] ; CCKQ       ; 22.500    ;           ; Rise       ; CCKQ            ;
+;  BANKSEL[4] ; CCKQ       ; 22.500    ;           ; Rise       ; CCKQ            ;
+;  BANKSEL[5] ; CCKQ       ; 22.500    ;           ; Rise       ; CCKQ            ;
+;  BANKSEL[6] ; CCKQ       ; 22.500    ;           ; Rise       ; CCKQ            ;
+;  BANKSEL[7] ; CCKQ       ; 22.500    ;           ; Rise       ; CCKQ            ;
+; DRDO[*]     ; CCKQ       ; 17.500    ;           ; Rise       ; CCKQ            ;
+;  DRDO[0]    ; CCKQ       ; 17.500    ;           ; Rise       ; CCKQ            ;
+;  DRDO[1]    ; CCKQ       ; 17.500    ;           ; Rise       ; CCKQ            ;
+;  DRDO[2]    ; CCKQ       ; 17.500    ;           ; Rise       ; CCKQ            ;
+;  DRDO[3]    ; CCKQ       ; 17.500    ;           ; Rise       ; CCKQ            ;
+;  DRDO[4]    ; CCKQ       ; 17.500    ;           ; Rise       ; CCKQ            ;
+;  DRDO[5]    ; CCKQ       ; 17.500    ;           ; Rise       ; CCKQ            ;
+;  DRDO[6]    ; CCKQ       ; 17.500    ;           ; Rise       ; CCKQ            ;
+;  DRDO[7]    ; CCKQ       ; 17.500    ;           ; Rise       ; CCKQ            ;
++-------------+------------+-----------+-----------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CCK        ; CCKD     ; 0        ; 40       ; 0        ; 0        ;
+; CCKD       ; CCKD     ; 320      ; 0        ; 0        ; 0        ;
+; CCKQ       ; CCKD     ; 320      ; 0        ; 0        ; 0        ;
+; CCK        ; CCKQ     ; 0        ; 40       ; 0        ; 0        ;
+; CCKD       ; CCKQ     ; 320      ; 0        ; 0        ; 0        ;
+; CCKQ       ; CCKQ     ; 320      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CCK        ; CCKD     ; 0        ; 40       ; 0        ; 0        ;
+; CCKD       ; CCKD     ; 320      ; 0        ; 0        ; 0        ;
+; CCKQ       ; CCKD     ; 320      ; 0        ; 0        ; 0        ;
+; CCK        ; CCKQ     ; 0        ; 40       ; 0        ; 0        ;
+; CCKD       ; CCKQ     ; 320      ; 0        ; 0        ; 0        ;
+; CCKQ       ; CCKQ     ; 320      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 17    ; 17   ;
+; Unconstrained Input Port Paths  ; 33    ; 33   ;
+; Unconstrained Output Ports      ; 28    ; 28   ;
+; Unconstrained Output Port Paths ; 300   ; 300  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Jun 07 10:50:06 2025
+Info: Command: quartus_sta ECS_ChipRamSwitcher -c ECS_ChipRamSwitcher
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (306004): Started post-fitting delay annotation
+Info (306005): Delay annotation completed successfully
+Warning (335095): TimeQuest Timing Analyzer does not support the analysis of latches as synchronous elements for the currently selected device family.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'ECS_ChipRamSwitcher.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CCK CCK
+    Info (332105): create_clock -period 1.000 -name CCKD CCKD
+    Info (332105): create_clock -period 1.000 -name CCKQ CCKQ
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "BANKNUM[8]~126|[1]"
+    Warning (332126): Node "BANKNUM[8]~126|dataout"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "BANKNUM[9]~122|[1]"
+    Warning (332126): Node "BANKNUM[9]~122|dataout"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "BANKNUM[10]~118|[1]"
+    Warning (332126): Node "BANKNUM[10]~118|dataout"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "BANKNUM[11]~114|[1]"
+    Warning (332126): Node "BANKNUM[11]~114|dataout"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "BANKNUM[15]~110|dataout"
+    Warning (332126): Node "BANKNUM[15]~110|[1]"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "BANKNUM[13]~102|dataout"
+    Warning (332126): Node "BANKNUM[13]~102|[1]"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "BANKNUM[12]~106|dataout"
+    Warning (332126): Node "BANKNUM[12]~106|[1]"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "BANKNUM[14]~98|[1]"
+    Warning (332126): Node "BANKNUM[14]~98|dataout"
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -21.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):   -21.000      -105.000 CCKD 
+    Info (332119):   -21.000      -105.000 CCKQ 
+Info (332146): Worst-case hold slack is 5.500
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     5.500         0.000 CCKD 
+    Info (332119):     5.500         0.000 CCKQ 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.500
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.500       -40.000 CCK 
+    Info (332119):    -2.500       -40.000 CCKD 
+    Info (332119):    -2.500       -40.000 CCKQ 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 4504 megabytes
+    Info: Processing ended: Sat Jun 07 10:50:07 2025
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

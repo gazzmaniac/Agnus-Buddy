@@ -1,0 +1,33 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'CCKD'
+Slack : -21.000
+TNS   : -105.000
+
+Type  : Setup 'CCKQ'
+Slack : -21.000
+TNS   : -105.000
+
+Type  : Hold 'CCKD'
+Slack : 5.500
+TNS   : 0.000
+
+Type  : Hold 'CCKQ'
+Slack : 5.500
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'CCK'
+Slack : -2.500
+TNS   : -40.000
+
+Type  : Minimum Pulse Width 'CCKD'
+Slack : -2.500
+TNS   : -40.000
+
+Type  : Minimum Pulse Width 'CCKQ'
+Slack : -2.500
+TNS   : -40.000
+
+------------------------------------------------------------

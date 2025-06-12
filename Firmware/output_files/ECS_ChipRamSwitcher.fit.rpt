@@ -1,0 +1,586 @@
+Fitter report for ECS_ChipRamSwitcher
+Sat Jun 07 10:50:03 2025
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Summary
+  3. Fitter Settings
+  4. Parallel Compilation
+  5. Pin-Out File
+  6. Fitter Resource Usage Summary
+  7. Input Pins
+  8. Output Pins
+  9. All Package Pins
+ 10. I/O Standard
+ 11. Dedicated Inputs I/O
+ 12. Output Pin Default Load For Reported TCO
+ 13. Fitter Resource Utilization by Entity
+ 14. Control Signals
+ 15. Global & Other Fast Signals
+ 16. Non-Global High Fan-Out Signals
+ 17. Other Routing Usage Summary
+ 18. LAB Macrocells
+ 19. Shareable Expander
+ 20. Logic Cell Interconnection
+ 21. Fitter Device Options
+ 22. Fitter Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; Fitter Summary                                                              ;
++---------------------------+-------------------------------------------------+
+; Fitter Status             ; Successful - Sat Jun 07 10:50:03 2025           ;
+; Quartus II 64-Bit Version ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name             ; ECS_ChipRamSwitcher                             ;
+; Top-level Entity Name     ; ECS_ChipRamSwitcher                             ;
+; Family                    ; MAX7000S                                        ;
+; Device                    ; EPM7064STC100-7                                 ;
+; Timing Models             ; Final                                           ;
+; Total macrocells          ; 46 / 64 ( 72 % )                                ;
+; Total pins                ; 53 / 68 ( 78 % )                                ;
++---------------------------+-------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Fitter Settings                                                                                              ;
++----------------------------------------------------------------------------+-----------------+---------------+
+; Option                                                                     ; Setting         ; Default Value ;
++----------------------------------------------------------------------------+-----------------+---------------+
+; Device                                                                     ; EPM7064STC100-7 ;               ;
+; Use smart compilation                                                      ; Off             ; Off           ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On              ; On            ;
+; Enable compact report table                                                ; Off             ; Off           ;
+; Optimize Multi-Corner Timing                                               ; Off             ; Off           ;
+; Optimize Timing for ECOs                                                   ; Off             ; Off           ;
+; Regenerate full fit report during ECO compiles                             ; Off             ; Off           ;
+; Optimize IOC Register Placement for Timing                                 ; Normal          ; Normal        ;
+; Fitter Initial Placement Seed                                              ; 1               ; 1             ;
+; Slow Slew Rate                                                             ; Off             ; Off           ;
+; Fitter Effort                                                              ; Auto Fit        ; Auto Fit      ;
+; Force Fitter to Avoid Periphery Placement Warnings                         ; Off             ; Off           ;
++----------------------------------------------------------------------------+-----------------+---------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------+
+; Pin-Out File ;
++--------------+
+The pin-out file can be found in W:/Electronics/Projects/Mine/Amiga/SMD2000 Bank Switching Agnus Card/Firmware/output_files/ECS_ChipRamSwitcher.pin.
+
+
++-------------------------------------------------+
+; Fitter Resource Usage Summary                   ;
++------------------------------+------------------+
+; Resource                     ; Usage            ;
++------------------------------+------------------+
+; Logic cells                  ; 46 / 64 ( 72 % ) ;
+; Registers                    ; 16 / 64 ( 25 % ) ;
+; Number of pterms used        ; 97               ;
+; I/O pins                     ; 53 / 68 ( 78 % ) ;
+;     -- Clock pins            ; 2 / 2 ( 100 % )  ;
+;     -- Dedicated input pins  ; 1 / 2 ( 50 % )   ;
+;                              ;                  ;
+; Global signals               ; 1                ;
+; Shareable expanders          ; 9 / 64 ( 14 % )  ;
+; Parallel expanders           ; 0 / 60 ( 0 % )   ;
+; Cells using turbo bit        ; 46 / 64 ( 72 % ) ;
+; Maximum fan-out              ; 17               ;
+; Highest non-global fan-out   ; 17               ;
+; Total fan-out                ; 321              ;
+; Average fan-out              ; 2.97             ;
++------------------------------+------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                     ;
++----------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+; Name     ; Pin # ; I/O Bank ; LAB ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; I/O Standard ; Location assigned by ;
++----------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+; CCK      ; 90    ; --       ; --  ; 8                     ; 0                  ; yes    ; no             ; TTL          ; User                 ;
+; CCKD     ; 92    ; --       ; 1   ; 8                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; CCKQ     ; 85    ; --       ; 4   ; 8                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; CCKQD    ; 87    ; --       ; --  ; 0                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; DRDI[10] ; 67    ; --       ; 4   ; 1                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; DRDI[11] ; 65    ; --       ; 4   ; 1                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; DRDI[12] ; 64    ; --       ; 4   ; 1                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; DRDI[13] ; 63    ; --       ; 4   ; 1                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; DRDI[14] ; 61    ; --       ; 3   ; 1                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; DRDI[15] ; 60    ; --       ; 3   ; 1                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; DRDI[8]  ; 69    ; --       ; 4   ; 1                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; DRDI[9]  ; 68    ; --       ; 4   ; 1                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; RGA[1]   ; 6     ; --       ; 1   ; 1                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; RGA[2]   ; 8     ; --       ; 1   ; 1                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; RGA[3]   ; 9     ; --       ; 1   ; 1                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; RGA[4]   ; 10    ; --       ; 1   ; 1                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; RGA[5]   ; 13    ; --       ; 1   ; 1                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; RGA[6]   ; 14    ; --       ; 1   ; 1                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; RGA[7]   ; 16    ; --       ; 2   ; 1                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; RGA[8]   ; 17    ; --       ; 2   ; 1                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; _RST     ; 89    ; --       ; --  ; 17                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
++----------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                     ;
++-------------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+; Name        ; Pin # ; I/O Bank ; LAB ; Output Register ; Slow Slew Rate ; Open Drain ; TRI Primitive ; I/O Standard ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
++-------------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+; BANKSEL[0]  ; 52    ; --       ; 3   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; BANKSEL[10] ; 35    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; BANKSEL[11] ; 33    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; BANKSEL[12] ; 32    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; BANKSEL[13] ; 31    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; BANKSEL[14] ; 30    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; BANKSEL[15] ; 29    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; BANKSEL[1]  ; 48    ; --       ; 3   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; BANKSEL[2]  ; 47    ; --       ; 3   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; BANKSEL[3]  ; 46    ; --       ; 3   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; BANKSEL[4]  ; 45    ; --       ; 3   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; BANKSEL[5]  ; 44    ; --       ; 3   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; BANKSEL[6]  ; 41    ; --       ; 3   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; BANKSEL[7]  ; 40    ; --       ; 3   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; BANKSEL[8]  ; 37    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; BANKSEL[9]  ; 36    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; DRDO[0]     ; 84    ; --       ; 4   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; DRDO[1]     ; 83    ; --       ; 4   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; DRDO[2]     ; 81    ; --       ; 4   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; DRDO[3]     ; 80    ; --       ; 4   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; DRDO[4]     ; 79    ; --       ; 4   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; DRDO[5]     ; 76    ; --       ; 4   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; DRDO[6]     ; 75    ; --       ; 4   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; DRDO[7]     ; 71    ; --       ; 4   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; LED0        ; 97    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; LED1        ; 98    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; LED2        ; 99    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; LED3        ; 100   ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
++-------------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; All Package Pins                                                                                      ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+; Location ; Pad Number ; I/O Bank ; Pin Name/Usage ; Dir.   ; I/O Standard ; Voltage ; User Assignment ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+; 1        ;            ;          ; NC             ;        ;              ;         ;                 ;
+; 2        ;            ;          ; NC             ;        ;              ;         ;                 ;
+; 3        ; 12         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 4        ; 13         ; --       ; TDI            ; input  ; TTL          ;         ; Y               ;
+; 5        ;            ;          ; NC             ;        ;              ;         ;                 ;
+; 6        ; 14         ; --       ; RGA[1]         ; input  ; TTL          ;         ; Y               ;
+; 7        ;            ;          ; NC             ;        ;              ;         ;                 ;
+; 8        ; 15         ; --       ; RGA[2]         ; input  ; TTL          ;         ; Y               ;
+; 9        ; 16         ; --       ; RGA[3]         ; input  ; TTL          ;         ; Y               ;
+; 10       ; 17         ; --       ; RGA[4]         ; input  ; TTL          ;         ; Y               ;
+; 11       ; 18         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 12       ; 19         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 13       ; 20         ; --       ; RGA[5]         ; input  ; TTL          ;         ; Y               ;
+; 14       ; 21         ; --       ; RGA[6]         ; input  ; TTL          ;         ; Y               ;
+; 15       ; 22         ; --       ; TMS            ; input  ; TTL          ;         ; Y               ;
+; 16       ; 23         ; --       ; RGA[7]         ; input  ; TTL          ;         ; Y               ;
+; 17       ; 24         ; --       ; RGA[8]         ; input  ; TTL          ;         ; Y               ;
+; 18       ; 25         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 19       ; 26         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 20       ; 27         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 21       ; 28         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 22       ;            ;          ; NC             ;        ;              ;         ;                 ;
+; 23       ; 29         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 24       ;            ;          ; NC             ;        ;              ;         ;                 ;
+; 25       ; 30         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 26       ; 31         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 27       ;            ;          ; NC             ;        ;              ;         ;                 ;
+; 28       ;            ;          ; NC             ;        ;              ;         ;                 ;
+; 29       ; 32         ; --       ; BANKSEL[15]    ; output ; TTL          ;         ; Y               ;
+; 30       ; 33         ; --       ; BANKSEL[14]    ; output ; TTL          ;         ; Y               ;
+; 31       ; 34         ; --       ; BANKSEL[13]    ; output ; TTL          ;         ; Y               ;
+; 32       ; 35         ; --       ; BANKSEL[12]    ; output ; TTL          ;         ; Y               ;
+; 33       ; 36         ; --       ; BANKSEL[11]    ; output ; TTL          ;         ; Y               ;
+; 34       ; 37         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 35       ; 38         ; --       ; BANKSEL[10]    ; output ; TTL          ;         ; Y               ;
+; 36       ; 39         ; --       ; BANKSEL[9]     ; output ; TTL          ;         ; Y               ;
+; 37       ; 40         ; --       ; BANKSEL[8]     ; output ; TTL          ;         ; Y               ;
+; 38       ; 41         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 39       ; 42         ; --       ; VCCINT         ; power  ;              ; 5.0V    ;                 ;
+; 40       ; 43         ; --       ; BANKSEL[7]     ; output ; TTL          ;         ; Y               ;
+; 41       ; 44         ; --       ; BANKSEL[6]     ; output ; TTL          ;         ; Y               ;
+; 42       ; 45         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 43       ; 46         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 44       ; 47         ; --       ; BANKSEL[5]     ; output ; TTL          ;         ; Y               ;
+; 45       ; 48         ; --       ; BANKSEL[4]     ; output ; TTL          ;         ; Y               ;
+; 46       ; 49         ; --       ; BANKSEL[3]     ; output ; TTL          ;         ; Y               ;
+; 47       ; 50         ; --       ; BANKSEL[2]     ; output ; TTL          ;         ; Y               ;
+; 48       ; 51         ; --       ; BANKSEL[1]     ; output ; TTL          ;         ; Y               ;
+; 49       ;            ;          ; NC             ;        ;              ;         ;                 ;
+; 50       ;            ;          ; NC             ;        ;              ;         ;                 ;
+; 51       ; 52         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 52       ; 53         ; --       ; BANKSEL[0]     ; output ; TTL          ;         ; Y               ;
+; 53       ;            ;          ; NC             ;        ;              ;         ;                 ;
+; 54       ; 54         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 55       ;            ;          ; NC             ;        ;              ;         ;                 ;
+; 56       ; 55         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 57       ; 56         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 58       ; 57         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 59       ; 58         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 60       ; 59         ; --       ; DRDI[15]       ; input  ; TTL          ;         ; Y               ;
+; 61       ; 60         ; --       ; DRDI[14]       ; input  ; TTL          ;         ; Y               ;
+; 62       ; 61         ; --       ; TCK            ; input  ; TTL          ;         ; Y               ;
+; 63       ; 62         ; --       ; DRDI[13]       ; input  ; TTL          ;         ; Y               ;
+; 64       ; 63         ; --       ; DRDI[12]       ; input  ; TTL          ;         ; Y               ;
+; 65       ; 64         ; --       ; DRDI[11]       ; input  ; TTL          ;         ; Y               ;
+; 66       ; 65         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 67       ; 66         ; --       ; DRDI[10]       ; input  ; TTL          ;         ; Y               ;
+; 68       ; 67         ; --       ; DRDI[9]        ; input  ; TTL          ;         ; Y               ;
+; 69       ; 68         ; --       ; DRDI[8]        ; input  ; TTL          ;         ; Y               ;
+; 70       ;            ;          ; NC             ;        ;              ;         ;                 ;
+; 71       ; 69         ; --       ; DRDO[7]        ; output ; TTL          ;         ; Y               ;
+; 72       ;            ;          ; NC             ;        ;              ;         ;                 ;
+; 73       ; 70         ; --       ; TDO            ; output ; TTL          ;         ; Y               ;
+; 74       ; 71         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 75       ; 72         ; --       ; DRDO[6]        ; output ; TTL          ;         ; Y               ;
+; 76       ; 73         ; --       ; DRDO[5]        ; output ; TTL          ;         ; Y               ;
+; 77       ;            ;          ; NC             ;        ;              ;         ;                 ;
+; 78       ;            ;          ; NC             ;        ;              ;         ;                 ;
+; 79       ; 74         ; --       ; DRDO[4]        ; output ; TTL          ;         ; Y               ;
+; 80       ; 75         ; --       ; DRDO[3]        ; output ; TTL          ;         ; Y               ;
+; 81       ; 76         ; --       ; DRDO[2]        ; output ; TTL          ;         ; Y               ;
+; 82       ; 77         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 83       ; 78         ; --       ; DRDO[1]        ; output ; TTL          ;         ; Y               ;
+; 84       ; 79         ; --       ; DRDO[0]        ; output ; TTL          ;         ; Y               ;
+; 85       ; 80         ; --       ; CCKQ           ; input  ; TTL          ;         ; Y               ;
+; 86       ; 81         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 87       ; 82         ; --       ; CCKQD          ; input  ; TTL          ;         ; Y               ;
+; 88       ; 83         ; --       ; GND+           ;        ;              ;         ;                 ;
+; 89       ; 0          ; --       ; _RST           ; input  ; TTL          ;         ; Y               ;
+; 90       ; 1          ; --       ; CCK            ; input  ; TTL          ;         ; Y               ;
+; 91       ; 2          ; --       ; VCCINT         ; power  ;              ; 5.0V    ;                 ;
+; 92       ; 3          ; --       ; CCKD           ; input  ; TTL          ;         ; Y               ;
+; 93       ; 4          ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 94       ; 5          ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 95       ; 6          ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 96       ; 7          ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 97       ; 8          ; --       ; LED0           ; output ; TTL          ;         ; Y               ;
+; 98       ; 9          ; --       ; LED1           ; output ; TTL          ;         ; Y               ;
+; 99       ; 10         ; --       ; LED2           ; output ; TTL          ;         ; Y               ;
+; 100      ; 11         ; --       ; LED3           ; output ; TTL          ;         ; Y               ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+Note: Pin directions (input, output or bidir) are based on device operating in user mode.
+
+
++--------------------------------------------------------------------------------------------------+
+; I/O Standard                                                                                     ;
++--------------+------------+----------------------+-------------------+-------------------+-------+
+; I/O Standard ; Input Vref ; Dedicated Input Pins ; Pins in I/O Bank1 ; Pins in I/O Bank2 ; Total ;
++--------------+------------+----------------------+-------------------+-------------------+-------+
+; TTL          ; -          ; 3                    ; 0                 ; 0                 ; 3     ;
++--------------+------------+----------------------+-------------------+-------------------+-------+
+
+
++---------------------------------------------------------------------+
+; Dedicated Inputs I/O                                                ;
++-------+-------+-------+-------+--------------+------------+---------+
+; Name  ; Pin # ; Type  ; VCCIO ; I/O Standard ; Input Vref ; Current ;
++-------+-------+-------+-------+--------------+------------+---------+
+; CCK   ; 90    ; Input ; --    ; TTL          ; -          ; 0 mA    ;
+; CCKQD ; 87    ; Input ; --    ; TTL          ; -          ; 0 mA    ;
+; _RST  ; 89    ; Input ; --    ; TTL          ; -          ; 0 mA    ;
++-------+-------+-------+-------+--------------+------------+---------+
+
+
++-----------------------------------------------+
+; Output Pin Default Load For Reported TCO      ;
++--------------+-------+------------------------+
+; I/O Standard ; Load  ; Termination Resistance ;
++--------------+-------+------------------------+
+; 3.3-V LVTTL  ; 10 pF ; Not Available          ;
+; 3.3-V LVCMOS ; 10 pF ; Not Available          ;
+; TTL          ; 10 pF ; Not Available          ;
++--------------+-------+------------------------+
+Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
+
+
++--------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                ;
++----------------------------+------------+------+----------------------+--------------+
+; Compilation Hierarchy Node ; Macrocells ; Pins ; Full Hierarchy Name  ; Library Name ;
++----------------------------+------------+------+----------------------+--------------+
+; |ECS_ChipRamSwitcher       ; 46         ; 53   ; |ECS_ChipRamSwitcher ; work         ;
++----------------------------+------------+------+----------------------+--------------+
+
+
++--------------------------------------------------------------------------------------+
+; Control Signals                                                                      ;
++------+----------+---------+-------+--------+----------------------+------------------+
+; Name ; Location ; Fan-Out ; Usage ; Global ; Global Resource Used ; Global Line Name ;
++------+----------+---------+-------+--------+----------------------+------------------+
+; CCK  ; PIN_90   ; 8       ; Clock ; yes    ; On                   ; --               ;
+; CCKD ; PIN_92   ; 8       ; Clock ; no     ; --                   ; --               ;
+; CCKQ ; PIN_85   ; 8       ; Clock ; no     ; --                   ; --               ;
++------+----------+---------+-------+--------+----------------------+------------------+
+
+
++---------------------------------------------------------------------+
+; Global & Other Fast Signals                                         ;
++------+----------+---------+----------------------+------------------+
+; Name ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ;
++------+----------+---------+----------------------+------------------+
+; CCK  ; PIN_90   ; 8       ; On                   ; --               ;
++------+----------+---------+----------------------+------------------+
+
+
++---------------------------------+
+; Non-Global High Fan-Out Signals ;
++------------------+--------------+
+; Name             ; Fan-Out      ;
++------------------+--------------+
+; _RST             ; 17           ;
+; LRGA[1]          ; 17           ;
+; BANKNUM[15]~110  ; 15           ;
+; BANKNUM[12]~106  ; 15           ;
+; BANKNUM[13]~102  ; 15           ;
+; Equal2~3         ; 14           ;
+; LRGA[4]          ; 12           ;
+; LRGA[5]          ; 12           ;
+; LRGA[6]          ; 12           ;
+; LRGA[7]          ; 12           ;
+; LRGA[8]          ; 12           ;
+; LRGA[2]          ; 12           ;
+; LRGA[3]          ; 12           ;
+; BANKNUM[8]~126   ; 11           ;
+; BANKNUM[9]~122   ; 11           ;
+; BANKNUM[10]~118  ; 11           ;
+; BANKNUM[14]~98   ; 10           ;
+; CCKD             ; 8            ;
+; CCKQ             ; 8            ;
+; Equal0~2sexp     ; 8            ;
+; BANKNUM[6]_308~8 ; 8            ;
+; DSBNK~1          ; 6            ;
+; BANKNUM[11]~114  ; 4            ;
+; DRDI[8]          ; 1            ;
+; DRDI[9]          ; 1            ;
+; DRDI[10]         ; 1            ;
+; DRDI[11]         ; 1            ;
+; DRDI[12]         ; 1            ;
+; DRDI[13]         ; 1            ;
+; DRDI[14]         ; 1            ;
+; DRDI[15]         ; 1            ;
+; RGA[1]           ; 1            ;
+; RGA[2]           ; 1            ;
+; RGA[3]           ; 1            ;
+; RGA[4]           ; 1            ;
+; RGA[5]           ; 1            ;
+; RGA[6]           ; 1            ;
+; RGA[7]           ; 1            ;
+; RGA[8]           ; 1            ;
+; Mux8~2sexpand0   ; 1            ;
+; Mux7~1sexpand0   ; 1            ;
+; Mux6~1sexpand0   ; 1            ;
+; Mux5~2sexpand0   ; 1            ;
+; Mux4~1sexpand0   ; 1            ;
+; Mux3~2sexpand0   ; 1            ;
+; Mux1~1sexpand0   ; 1            ;
+; Mux0~2sexpand0   ; 1            ;
+; BANKNUM[0]~143   ; 1            ;
+; BANKNUM[1]~141   ; 1            ;
+; BANKNUM[2]~139   ; 1            ;
+; BANKNUM[3]~137   ; 1            ;
+; BANKNUM[4]~135   ; 1            ;
+; BANKNUM[5]~133   ; 1            ;
+; BANKNUM[6]~131   ; 1            ;
+; BANKNUM[7]~129   ; 1            ;
+; LRDO[0]~38       ; 1            ;
+; LRDO[1]~36       ; 1            ;
+; LRDO[2]~33       ; 1            ;
+; LRDO[3]~30       ; 1            ;
+; LRDO[7]~26       ; 1            ;
+; LRDO[4]~24       ; 1            ;
+; LRDO[5]~21       ; 1            ;
+; LRDO[6]~18       ; 1            ;
+; Decoder0~6       ; 1            ;
+; Decoder0~4       ; 1            ;
+; LDRDI[8]         ; 1            ;
+; LDRDI[9]         ; 1            ;
+; LDRDI[10]        ; 1            ;
+; LDRDI[11]        ; 1            ;
+; LDRDI[12]        ; 1            ;
+; LDRDI[13]        ; 1            ;
+; LDRDI[14]        ; 1            ;
+; LDRDI[15]        ; 1            ;
+; _RST~1           ; 1            ;
++------------------+--------------+
+
+
++-------------------------------------------------+
+; Other Routing Usage Summary                     ;
++-----------------------------+-------------------+
+; Other Routing Resource Type ; Usage             ;
++-----------------------------+-------------------+
+; Output enables              ; 2 / 6 ( 33 % )    ;
+; PIA buffers                 ; 75 / 144 ( 52 % ) ;
++-----------------------------+-------------------+
+
+
++-----------------------------------------------------------------------+
+; LAB Macrocells                                                        ;
++-----------------------------------------+-----------------------------+
+; Number of Macrocells  (Average = 11.50) ; Number of LABs  (Total = 4) ;
++-----------------------------------------+-----------------------------+
+; 0                                       ; 0                           ;
+; 1                                       ; 0                           ;
+; 2                                       ; 0                           ;
+; 3                                       ; 0                           ;
+; 4                                       ; 0                           ;
+; 5                                       ; 0                           ;
+; 6                                       ; 0                           ;
+; 7                                       ; 0                           ;
+; 8                                       ; 0                           ;
+; 9                                       ; 2                           ;
+; 10                                      ; 0                           ;
+; 11                                      ; 0                           ;
+; 12                                      ; 0                           ;
+; 13                                      ; 1                           ;
+; 14                                      ; 0                           ;
+; 15                                      ; 1                           ;
++-----------------------------------------+-----------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Shareable Expander                                                            ;
++-------------------------------------------------+-----------------------------+
+; Number of shareable expanders  (Average = 2.25) ; Number of LABs  (Total = 2) ;
++-------------------------------------------------+-----------------------------+
+; 0                                               ; 2                           ;
+; 1                                               ; 1                           ;
+; 2                                               ; 0                           ;
+; 3                                               ; 0                           ;
+; 4                                               ; 0                           ;
+; 5                                               ; 0                           ;
+; 6                                               ; 0                           ;
+; 7                                               ; 0                           ;
+; 8                                               ; 1                           ;
++-------------------------------------------------+-----------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Logic Cell Interconnection                                                                                                                                                                                                                                                                                                                                                              ;
++-----+------------+------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; LAB ; Logic Cell ; Input                                                                                                            ; Output                                                                                                                                                                                                                                            ;
++-----+------------+------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+;  A  ; LC12       ; _RST                                                                                                             ; LED0                                                                                                                                                                                                                                              ;
+;  A  ; LC10       ; BANKNUM[14]~98, BANKNUM[15]~110, BANKNUM[13]~102, BANKNUM[12]~106                                                ; LED2                                                                                                                                                                                                                                              ;
+;  A  ; LC9        ; BANKNUM[14]~98, BANKNUM[15]~110, BANKNUM[13]~102, BANKNUM[12]~106                                                ; LED3                                                                                                                                                                                                                                              ;
+;  A  ; LC14       ; RGA[2], _RST, CCKQ, CCKD                                                                                         ; Equal2~3, LRDO[7]~26, LRDO[0]~38, BANKNUM[14]~98, Equal0~2sexp, BANKNUM[13]~102, BANKNUM[12]~106, BANKNUM[15]~110, BANKNUM[11]~114, BANKNUM[10]~118, BANKNUM[9]~122, BANKNUM[8]~126                                                               ;
+;  A  ; LC13       ; RGA[1], _RST, CCKQ, CCKD                                                                                         ; LRDO[6]~18, LRDO[5]~21, LRDO[4]~24, LRDO[7]~26, LRDO[3]~30, LRDO[2]~33, LRDO[1]~36, LRDO[0]~38, BANKNUM[14]~98, Equal0~2sexp, BANKNUM[13]~102, BANKNUM[12]~106, BANKNUM[15]~110, BANKNUM[11]~114, BANKNUM[10]~118, BANKNUM[9]~122, BANKNUM[8]~126 ;
+;  A  ; LC6        ; CCK, DRDI[14], _RST                                                                                              ; BANKNUM[14]~98                                                                                                                                                                                                                                    ;
+;  A  ; LC7        ; CCK, DRDI[13], _RST                                                                                              ; BANKNUM[13]~102                                                                                                                                                                                                                                   ;
+;  A  ; LC1        ; CCK, DRDI[12], _RST                                                                                              ; BANKNUM[12]~106                                                                                                                                                                                                                                   ;
+;  A  ; LC8        ; CCK, DRDI[11], _RST                                                                                              ; BANKNUM[11]~114                                                                                                                                                                                                                                   ;
+;  A  ; LC2        ; CCK, DRDI[10], _RST                                                                                              ; BANKNUM[10]~118                                                                                                                                                                                                                                   ;
+;  A  ; LC15       ; CCK, DRDI[9], _RST                                                                                               ; BANKNUM[9]~122                                                                                                                                                                                                                                    ;
+;  A  ; LC16       ; CCK, DRDI[8], _RST                                                                                               ; BANKNUM[8]~126                                                                                                                                                                                                                                    ;
+;  A  ; LC11       ; BANKNUM[15]~110, BANKNUM[13]~102, BANKNUM[12]~106                                                                ; LED1, LRGA[8], LRGA[7], LRGA[6], LRGA[5], LRGA[4]                                                                                                                                                                                                 ;
+;  B  ; LC17       ; LDRDI[8], BANKNUM[8]~126, LRGA[2], LRGA[1], LRGA[8], LRGA[7], LRGA[6], LRGA[5], LRGA[4], LRGA[3], Equal0~2sexp   ; BANKNUM[8]~126, BANKSEL[8], LRDO[0]~38, Mux0~2sexpand0, Mux1~1sexpand0, Mux3~2sexpand0, Mux4~1sexpand0, Mux5~2sexpand0, Mux6~1sexpand0, Mux7~1sexpand0, Mux8~2sexpand0                                                                            ;
+;  B  ; LC20       ; LDRDI[11], BANKNUM[11]~114, LRGA[2], LRGA[1], LRGA[8], LRGA[7], LRGA[6], LRGA[5], LRGA[4], LRGA[3], Equal0~2sexp ; BANKNUM[11]~114, BANKSEL[11], LRDO[3]~30, BANKNUM[6]_308~8                                                                                                                                                                                        ;
+;  B  ; LC23       ; LDRDI[14], BANKNUM[14]~98, LRGA[2], LRGA[1], LRGA[8], LRGA[7], LRGA[6], LRGA[5], LRGA[4], LRGA[3], Equal0~2sexp  ; BANKNUM[14]~98, BANKSEL[14], Decoder0~4, Decoder0~6, LRGA[8], LRGA[7], LRGA[6], LRGA[5], LRGA[4], LRDO[6]~18                                                                                                                                      ;
+;  B  ; LC22       ; LDRDI[13], BANKNUM[13]~102, LRGA[2], LRGA[1], LRGA[8], LRGA[7], LRGA[6], LRGA[5], LRGA[4], LRGA[3], Equal0~2sexp ; BANKNUM[13]~102, BANKSEL[13], DSBNK~1, LRDO[5]~21, Decoder0~4, Decoder0~6, BANKNUM[6]_308~8, BANKNUM[7]~129, BANKNUM[6]~131, BANKNUM[5]~133, BANKNUM[4]~135, BANKNUM[3]~137, BANKNUM[2]~139, BANKNUM[1]~141, BANKNUM[0]~143                       ;
+;  B  ; LC21       ; LDRDI[12], BANKNUM[12]~106, LRGA[2], LRGA[1], LRGA[8], LRGA[7], LRGA[6], LRGA[5], LRGA[4], LRGA[3], Equal0~2sexp ; BANKNUM[12]~106, BANKSEL[12], DSBNK~1, LRDO[4]~24, Decoder0~4, Decoder0~6, BANKNUM[6]_308~8, BANKNUM[7]~129, BANKNUM[6]~131, BANKNUM[5]~133, BANKNUM[4]~135, BANKNUM[3]~137, BANKNUM[2]~139, BANKNUM[1]~141, BANKNUM[0]~143                       ;
+;  B  ; LC30       ; LRGA[2], LRGA[8], LRGA[7], LRGA[6], LRGA[5], LRGA[4], LRGA[3]                                                    ; LRDO[6]~18, LRDO[5]~21, LRDO[4]~24, DRDO[6], DRDO[5], DRDO[4], LRDO[3]~30, LRDO[2]~33, LRDO[1]~36, DRDO[7], DRDO[3], DRDO[2], DRDO[1], DRDO[0]                                                                                                    ;
+;  B  ; LC24       ; LDRDI[15], BANKNUM[15]~110, LRGA[2], LRGA[1], LRGA[8], LRGA[7], LRGA[6], LRGA[5], LRGA[4], LRGA[3], Equal0~2sexp ; DSBNK~1, BANKNUM[15]~110, BANKSEL[15], LRDO[7]~26, Decoder0~4, Decoder0~6, BANKNUM[6]_308~8, BANKNUM[7]~129, BANKNUM[6]~131, BANKNUM[5]~133, BANKNUM[4]~135, BANKNUM[3]~137, BANKNUM[2]~139, BANKNUM[1]~141, BANKNUM[0]~143                       ;
+;  B  ; LC19       ; LDRDI[10], BANKNUM[10]~118, LRGA[2], LRGA[1], LRGA[8], LRGA[7], LRGA[6], LRGA[5], LRGA[4], LRGA[3], Equal0~2sexp ; BANKNUM[10]~118, BANKSEL[10], LRDO[2]~33, Mux0~2sexpand0, Mux1~1sexpand0, Mux3~2sexpand0, Mux4~1sexpand0, Mux5~2sexpand0, Mux6~1sexpand0, Mux7~1sexpand0, Mux8~2sexpand0                                                                          ;
+;  B  ; LC18       ; LDRDI[9], BANKNUM[9]~122, LRGA[2], LRGA[1], LRGA[8], LRGA[7], LRGA[6], LRGA[5], LRGA[4], LRGA[3], Equal0~2sexp   ; BANKNUM[9]~122, BANKSEL[9], LRDO[1]~36, Mux0~2sexpand0, Mux1~1sexpand0, Mux3~2sexpand0, Mux4~1sexpand0, Mux5~2sexpand0, Mux6~1sexpand0, Mux7~1sexpand0, Mux8~2sexpand0                                                                            ;
+;  C  ; LC42       ; CCK, DRDI[15], _RST                                                                                              ; BANKNUM[15]~110                                                                                                                                                                                                                                   ;
+;  C  ; LC36       ; Mux3~2sexpand0, BANKNUM[15]~110, BANKNUM[13]~102, BANKNUM[12]~106                                                ; BANKSEL[5]                                                                                                                                                                                                                                        ;
+;  C  ; LC33       ; Mux0~2sexpand0, BANKNUM[15]~110, BANKNUM[13]~102, BANKNUM[12]~106                                                ; BANKSEL[7]                                                                                                                                                                                                                                        ;
+;  C  ; LC34       ; Mux1~1sexpand0, BANKNUM[15]~110, BANKNUM[13]~102, BANKNUM[12]~106                                                ; BANKSEL[6]                                                                                                                                                                                                                                        ;
+;  C  ; LC41       ; Mux8~2sexpand0, BANKNUM[15]~110, BANKNUM[13]~102, BANKNUM[12]~106                                                ; BANKSEL[0]                                                                                                                                                                                                                                        ;
+;  C  ; LC37       ; Mux4~1sexpand0, BANKNUM[15]~110, BANKNUM[13]~102, BANKNUM[12]~106                                                ; BANKSEL[4]                                                                                                                                                                                                                                        ;
+;  C  ; LC38       ; Mux5~2sexpand0, BANKNUM[15]~110, BANKNUM[13]~102, BANKNUM[12]~106                                                ; BANKSEL[3]                                                                                                                                                                                                                                        ;
+;  C  ; LC39       ; Mux6~1sexpand0, BANKNUM[15]~110, BANKNUM[13]~102, BANKNUM[12]~106                                                ; BANKSEL[2]                                                                                                                                                                                                                                        ;
+;  C  ; LC40       ; Mux7~1sexpand0, BANKNUM[15]~110, BANKNUM[13]~102, BANKNUM[12]~106                                                ; BANKSEL[1]                                                                                                                                                                                                                                        ;
+;  D  ; LC53       ; RGA[3], _RST, CCKQ, CCKD                                                                                         ; Equal2~3, LRDO[7]~26, LRDO[0]~38, BANKNUM[14]~98, Equal0~2sexp, BANKNUM[13]~102, BANKNUM[12]~106, BANKNUM[15]~110, BANKNUM[11]~114, BANKNUM[10]~118, BANKNUM[9]~122, BANKNUM[8]~126                                                               ;
+;  D  ; LC49       ; RGA[7], _RST, BANKNUM[14]~98, DSBNK~1, CCKQ, CCKD                                                                ; Equal2~3, LRDO[7]~26, LRDO[0]~38, BANKNUM[14]~98, Equal0~2sexp, BANKNUM[13]~102, BANKNUM[12]~106, BANKNUM[15]~110, BANKNUM[11]~114, BANKNUM[10]~118, BANKNUM[9]~122, BANKNUM[8]~126                                                               ;
+;  D  ; LC50       ; RGA[6], _RST, BANKNUM[14]~98, DSBNK~1, CCKQ, CCKD                                                                ; Equal2~3, LRDO[7]~26, LRDO[0]~38, BANKNUM[14]~98, Equal0~2sexp, BANKNUM[13]~102, BANKNUM[12]~106, BANKNUM[15]~110, BANKNUM[11]~114, BANKNUM[10]~118, BANKNUM[9]~122, BANKNUM[8]~126                                                               ;
+;  D  ; LC52       ; RGA[5], _RST, BANKNUM[14]~98, DSBNK~1, CCKQ, CCKD                                                                ; Equal2~3, LRDO[7]~26, LRDO[0]~38, BANKNUM[14]~98, Equal0~2sexp, BANKNUM[13]~102, BANKNUM[12]~106, BANKNUM[15]~110, BANKNUM[11]~114, BANKNUM[10]~118, BANKNUM[9]~122, BANKNUM[8]~126                                                               ;
+;  D  ; LC56       ; RGA[4], _RST, BANKNUM[14]~98, DSBNK~1, CCKQ, CCKD                                                                ; Equal2~3, LRDO[7]~26, LRDO[0]~38, BANKNUM[14]~98, Equal0~2sexp, BANKNUM[13]~102, BANKNUM[12]~106, BANKNUM[15]~110, BANKNUM[11]~114, BANKNUM[10]~118, BANKNUM[9]~122, BANKNUM[8]~126                                                               ;
+;  D  ; LC64       ; RGA[8], _RST, BANKNUM[14]~98, DSBNK~1, CCKQ, CCKD                                                                ; Equal2~3, LRDO[7]~26, LRDO[0]~38, BANKNUM[14]~98, Equal0~2sexp, BANKNUM[13]~102, BANKNUM[12]~106, BANKNUM[15]~110, BANKNUM[11]~114, BANKNUM[10]~118, BANKNUM[9]~122, BANKNUM[8]~126                                                               ;
+;  D  ; LC58       ; BANKNUM[13]~102, LRGA[1], Equal2~3                                                                               ; DRDO[5]                                                                                                                                                                                                                                           ;
+;  D  ; LC59       ; BANKNUM[12]~106, LRGA[1], Equal2~3                                                                               ; DRDO[4]                                                                                                                                                                                                                                           ;
+;  D  ; LC57       ; BANKNUM[14]~98, LRGA[1], Equal2~3                                                                                ; DRDO[6]                                                                                                                                                                                                                                           ;
+;  D  ; LC55       ; LRGA[1], BANKNUM[15]~110, LRGA[2], LRGA[8], LRGA[7], LRGA[6], LRGA[5], LRGA[4], LRGA[3]                          ; DRDO[7]                                                                                                                                                                                                                                           ;
+;  D  ; LC60       ; BANKNUM[11]~114, LRGA[1], Equal2~3                                                                               ; DRDO[3]                                                                                                                                                                                                                                           ;
+;  D  ; LC61       ; BANKNUM[10]~118, LRGA[1], Equal2~3                                                                               ; DRDO[2]                                                                                                                                                                                                                                           ;
+;  D  ; LC63       ; LRGA[1], BANKNUM[8]~126, LRGA[2], LRGA[8], LRGA[7], LRGA[6], LRGA[5], LRGA[4], LRGA[3]                           ; DRDO[0]                                                                                                                                                                                                                                           ;
+;  D  ; LC51       ; BANKNUM[11]~114, BANKNUM[15]~110, BANKNUM[13]~102, BANKNUM[12]~106                                               ; BANKSEL[7], BANKSEL[6], BANKSEL[5], BANKSEL[4], BANKSEL[3], BANKSEL[2], BANKSEL[1], BANKSEL[0]                                                                                                                                                    ;
+;  D  ; LC62       ; BANKNUM[9]~122, LRGA[1], Equal2~3                                                                                ; DRDO[1]                                                                                                                                                                                                                                           ;
++-----+------------+------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Fitter Device Options                                         ;
++----------------------------------------------+----------------+
+; Option                                       ; Setting        ;
++----------------------------------------------+----------------+
+; Enable user-supplied start-up clock (CLKUSR) ; Off            ;
+; Enable device-wide reset (DEV_CLRn)          ; Off            ;
+; Enable device-wide output enable (DEV_OE)    ; Off            ;
+; Enable INIT_DONE output                      ; Off            ;
+; Configuration scheme                         ; Passive Serial ;
+; Security bit                                 ; Off            ;
+; Base pin-out file on sameframe device        ; Off            ;
++----------------------------------------------+----------------+
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (119006): Selected device EPM7064STC100-7 for design "ECS_ChipRamSwitcher"
+Warning (15705): Ignored locations or region assignments to the following nodes
+    Warning (15706): Node "NUMBANKS[0]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "NUMBANKS[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "NUMBANKS[2]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "NUMBANKS[3]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "SIZE" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "TCK" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "TDI" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "TDO" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "TMS" is assigned to location or region, but does not exist in design
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4675 megabytes
+    Info: Processing ended: Sat Jun 07 10:50:03 2025
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
